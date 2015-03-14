@@ -3,6 +3,6 @@ Tema desenvolvido pela [Brasa](http://www.brasa.art.br/) para o site [Dia do Gra
 
 ## Copyright e Licença ##
 
-Copyright 2013 - 2014 - Brasa.
+Copyright 2015 - Brasa.
 
 O código PHP esta licenciado sob a Licença [GPLv2](http://www.gnu.org/licenses/gpl-2.0.txt). Todos os arquivos CSS, SCSS, JS, imagens e outros não incluindo arquivos PHP estão licenciados como [MIT](http://opensource.org/licenses/MIT) ou pela licença especificada dentro de seus arquivos.
