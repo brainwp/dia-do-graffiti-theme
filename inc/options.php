@@ -45,6 +45,42 @@ $odin_theme_options->set_fields(
 				),
 			)
 		),
+		'links_section' => array(
+			'tab'   => 'home_cfg', // Sessão da aba odin_general
+			'title' => __('Links rápidos','odin'),
+			'fields' => array(
+				array(
+					'id' => 'link_1_title',
+					'label' => __('Titulo do primeiro link rápido na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'link_1_url',
+					'label' => __('Link do primeiro link rápido na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'link_2_title',
+					'label' => __('Titulo do segundo link rápido na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'link_2_url',
+					'label' => __('Link do segundo link rápido na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'link_3_title',
+					'label' => __('Titulo do terceiro link rápido na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'link_3_url',
+					'label' => __('Link do terceiro link rápido na home','odin'),
+					'type' => 'text',
+				),
+			)
+		),
 		'geral_section' => array(
 			'tab'   => 'geral_cfg', // Sessão da aba odin_general
 			'title' => __('Configurações da página inicial','odin'),
