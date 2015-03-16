@@ -24,8 +24,26 @@ $options = get_option('home_cfg');
 			<div class="col-md-4 agenda">
 				<header class="col-md-12">
 					<h3 class="col-md-8 pull-left"><?php _e('Agenda de Ações','odin');?></h3>
-					<span class="pull-right bg-cor"><?php _e('Todas','odin');?></span>
+					<a class="link-agenda pull-right bg-cor"><?php _e('Todas','odin');?></a>
 				</header>
+				<div class="agenda-content col-md-12">
+					<?php
+					// WP_Query argument
+					$args = array (
+						'post_type'              => 'agenda',
+						'posts_per_page'         => '3',
+					);
+					// The Query
+					$query = new WP_Query( $args );
+					if ( $query->have_posts() ):
+						while ( $query->have_posts() ): $query->the_post();
+					       get_template_part('content-agenda');
+					    endwhile;
+				    endif;
+				    // Restore original Post Data
+				    wp_reset_postdata();
+				    ?>
+				</div><!-- .agenda-content -->
 			</div><!-- .col-md-4 agenda -->
 		</div><!-- .row -->
 	</div><!-- .container -->
