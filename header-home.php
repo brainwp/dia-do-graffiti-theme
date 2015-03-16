@@ -7,6 +7,7 @@
  * @package Odin
  * @since 2.2.0
  */
+$options = get_option('home_cfg');
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -40,5 +41,20 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</nav><!-- #menu-top.col-md-12 -->
-
+	<section id="slider-home" class="col-md-12">
+		<?php $style = wp_get_attachment_image_src($options['slider_bg'],'large');?>
+		<?php $style = 'background-image:url('.$style[0].');'?>
+		<div class="container" style="<?php echo esc_attr($style);?>">
+			<div class="row">
+				<div class="col-md-4 pull-left">
+					<div class="col-md-10 col-md-offset-2">
+						<?php echo wp_get_attachment_image($options['logo'],'full');?>
+					</div><!-- .col-md-10 col-md-offset-2 -->
+				</div><!-- .col-md-4 pull-left -->
+				<div class="col-md-7 pull-right">
+					<?php echo do_shortcode('[brasa_slider name="Slider Home" size="large"]');?>
+				</div><!-- .col-md-8 pull-right -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section><!-- #slider-home.col-md-12 -->
 	<div id="main" class="site-main row">
