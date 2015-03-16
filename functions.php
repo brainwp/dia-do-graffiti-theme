@@ -298,3 +298,7 @@ if ( is_woocommerce_activated() ) {
 }
 /*Add options */
 require get_template_directory() . '/inc/options.php';
+/* Advanced Custom fields */
+require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
+/*custom post types */
+require get_template_directory() . '/inc/cpt.php';
