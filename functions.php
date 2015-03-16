@@ -268,6 +268,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 require_once get_template_directory() . '/core/helpers.php';
 
 /**
+
  * WP Custom Admin.
  */
 require_once get_template_directory() . '/inc/admin.php';
@@ -302,3 +303,17 @@ require get_template_directory() . '/inc/options.php';
 require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 /*custom post types */
 require get_template_directory() . '/inc/cpt.php';
+/*css personalizado */
+function custom_css() {
+    if(!get_option('home_cfg'))
+    	return;
+    $option = get_option('geral_cfg');
+    $css = '<style>';
+    $css .= '.css-cor{color:'.$option['cor_principal'] . ' !important;}';
+    $css .= '.bg-cor{background-color:'.$option['cor_principal'] . ' !important;}';
+    $css .= '#menu-top li a{color:'.$option['cor_principal']. ' !important;}';
+    $css .= '.barra-bg{background-color:'.$option['cor_barra']. ' !important;}';
+    $css .= '</style>';
+    echo $css;
+}
+add_action('wp_footer', 'custom_css');

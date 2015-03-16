@@ -23,7 +23,7 @@ $options = get_option('home_cfg');
 </head>
 
 <body <?php body_class(); ?>>
-	<nav id="menu-top" class="col-md-12">
+	<nav id="menu-top" class="col-md-12 barra-bg">
 		<div class="container">
 			<div class="row">
 				<?php

@@ -9,7 +9,11 @@ $odin_theme_options->set_tabs(
 	array(
 		array(
 			'id' => 'home_cfg', // ID da aba e nome da entrada no banco de dados.
-			'title' => __('Home','litoral-sustentavel'), // Título da aba.
+			'title' => __('Home','odin'), // Título da aba.
+		),
+		array(
+			'id' => 'geral_cfg', // ID da aba e nome da entrada no banco de dados.
+			'title' => __('Configurações gerais','odin'), // Título da aba.
 		),
 	)
 );
@@ -38,6 +42,24 @@ $odin_theme_options->set_fields(
 					'id' => 'content_text',
 					'label' => __('Texto da descrição do site na home','odin'),
 					'type' => 'textarea',
+				),
+			)
+		),
+		'geral_section' => array(
+			'tab'   => 'geral_cfg', // Sessão da aba odin_general
+			'title' => __('Configurações da página inicial','odin'),
+			'fields' => array(
+				array(
+					'id' => 'cor_principal',
+					'label' => __('Cor principal','odin'),
+					'type' => 'color',
+					'default' => '#2c989a',
+				),
+				array(
+					'id' => 'cor_barra',
+					'label' => __('Cor das barras','odin'),
+					'type' => 'color',
+					'default' => '#1f1f1f',
 				),
 			)
 		),

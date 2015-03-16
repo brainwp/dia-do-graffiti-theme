@@ -7,9 +7,15 @@ $options = get_option('home_cfg');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 site-description">
-				<h3><?php echo esc_textarea($options['content_title']);?></h3>
+				<h3 class="css-cor"><?php echo esc_textarea($options['content_title']);?></h3>
 				<p><?php echo esc_textarea($options['content_text']);?></p>
 			</div><!-- .col-md-4 site-description -->
+			<div class="col-md-4 agenda">
+				<header class="col-md-12">
+					<h3 class="col-md-8 pull-left"><?php _e('Agenda de Ações','odin');?></h3>
+					<span class="pull-right bg-cor"><?php _e('Todas','odin');?></span>
+				</header>
+			</div><!-- .col-md-4 agenda -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #infos-home -->
