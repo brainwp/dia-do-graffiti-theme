@@ -40,5 +40,4 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</nav><!-- #menu-top.col-md-12 -->
-
 	<div id="main" class="site-main row">
