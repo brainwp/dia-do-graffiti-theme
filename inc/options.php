@@ -29,7 +29,18 @@ $odin_theme_options->set_fields(
 					'label' => __('Imagem de fundo do slider/logo','odin'),
 					'type' => 'image',
 				),
+				array(
+					'id' => 'content_title',
+					'label' => __('Titulo da descrição do site na home','odin'),
+					'type' => 'text',
+				),
+				array(
+					'id' => 'content_text',
+					'label' => __('Texto da descrição do site na home','odin'),
+					'type' => 'textarea',
+				),
 			)
 		),
 	)
 );
+?>

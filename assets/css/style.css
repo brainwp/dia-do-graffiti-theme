@@ -35,3 +35,13 @@ nav#menu-top li a{
 #slider-home .pull-left{
 	margin-top:6%;
 }
+/* Informações na home */
+#infos-home .site-description h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color:#2c989a;
+	font-size:2.3em;
+}
+#infos-home .site-description p{
+	font-family: 'Source Sans Pro', sans-serif;
+}

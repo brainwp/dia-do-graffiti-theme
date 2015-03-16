@@ -57,4 +57,3 @@ $options = get_option('home_cfg');
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- #slider-home.col-md-12 -->
-	<div id="main" class="site-main row">
