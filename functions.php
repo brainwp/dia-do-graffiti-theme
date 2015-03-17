@@ -317,3 +317,7 @@ function custom_css() {
     echo $css;
 }
 add_action('wp_footer', 'custom_css');
+function custom_excerpt_length( $length ) {
+	return 80;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
