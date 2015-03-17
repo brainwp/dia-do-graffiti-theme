@@ -15,4 +15,9 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- .barra-title -->
+	<div class="container">
+		<div class="row">
+			<?php the_content();?>
+		</div><!-- .row -->
+	</div><!-- .container -->
 </article><!-- #post-## -->

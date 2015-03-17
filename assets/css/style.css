@@ -276,15 +276,30 @@ nav#menu-top li a{
 }
 /* Page / page.php */
 #page-single{
+	background:url('../images/bg-article.jpg') fixed no-repeat;
+	background-size:cover;
 	width:100%;
+}
+#page-single *{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
 #page-single .barra-title{
 	width:100%;
-	background:url('../images/bg-noticias.jpg') no-repeat;
+	background:url('../images/bg-noticias.jpg') fixed no-repeat;
 	background-size:cover;
 }
 #page-single .barra-title h1{
 	color:white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
+}
+#page-single .barra-title .row{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#page-single>div.container>div.row{
+	padding-top:20px;
+	padding-bottom:20px;
+	font-size:0.9em;
 }
