@@ -181,3 +181,38 @@ nav#menu-top li a{
 	display:block;
 	text-decoration: none !important;
 }
+/* Barra de Newsletter / Cadastro de email */
+#barra-newsletter{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+#barra-newsletter *{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+#barra-newsletter .text{
+	font-weight: 400;
+	color:#a2a2a2;
+}
+#barra-newsletter h3.section-title{
+	font-weight: 300;
+}
+#barra-newsletter input{
+	border-radius: 20px;
+	background:#2b2b2b;
+	border:none !important;
+	color:#a2a2a2;
+	padding:5px;
+	padding-left:10px;
+	padding-right: 10px;
+	margin-top:5px;
+}
+#barra-newsletter button{
+	background:transparent!important;
+	border:none !important;
+	font-size:1.4em;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+#barra-newsletter input:last-child{
+	margin-top:0;
+}

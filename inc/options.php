@@ -99,6 +99,24 @@ $odin_theme_options->set_fields(
 				),
 			)
 		),
+		'geral_section_newsletter' => array(
+			'tab'   => 'geral_cfg', // Sessão da aba odin_general
+			'title' => __('Configurações do Newsletter','odin'),
+			'fields' => array(
+				array(
+					'id' => 'newsletter_title',
+					'label' => __('Titulo do newsletter','odin'),
+					'type' => 'text',
+					'default' => 'Assine nosso Newsletter',
+				),
+				array(
+					'id' => 'newsletter_text',
+					'label' => __('Texto do newsletter','odin'),
+					'type' => 'textarea',
+					//'default' => '',
+				),
+			)
+		),
 	)
 );
 ?>
