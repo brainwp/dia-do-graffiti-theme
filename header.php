@@ -7,6 +7,7 @@
  * @package Odin
  * @since 2.2.0
  */
+$options = get_option('geral_cfg');
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -22,9 +23,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<nav id="menu-top" class="col-md-12">
+	<nav id="menu-top" class="col-md-12 barra-bg">
 		<div class="container">
 			<div class="row">
+				<div class="pull-left">
+					<?php echo wp_get_attachment_image($options['logo'],'full');?>
+				</div><!-- .pull-left -->
 				<?php
 				wp_nav_menu(
 					array(
@@ -40,4 +44,3 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</nav><!-- #menu-top.col-md-12 -->
-	<div id="main" class="site-main row">

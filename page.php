@@ -11,11 +11,7 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
-		<main id="main-content" class="site-main" role="main">
-
-			<?php
+<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
 
@@ -29,8 +25,6 @@ get_header(); ?>
 				endwhile;
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
 <?php
+get_template_part('/parts/barra-newsletter');
 get_footer();

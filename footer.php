@@ -9,16 +9,30 @@
  * @since 2.2.0
  */
 ?>
-
-		</div><!-- #main -->
-
-		<footer id="footer" role="contentinfo">
-			<div class="site-info">
-				<span>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></span>
-			</div><!-- .site-info -->
-		</footer><!-- #footer -->
+<footer id="footer-creditos" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 pull-left">
+				<div class="col-md-12">
+					<?php _e('Alguns direitos reservados','odin');?>
+					<img src="<?php bloginfo('template_url');?>/assets/images/cc-icon.jpg">
+				</div><!-- .col-md-12 -->
+				<div class="col-md-12">
+					<?php _e('Desenvolvido com','odin');?>
+					<img src="<?php bloginfo('template_url');?>/assets/images/wp-icon.jpg">
+				</div><!-- .col-md-12 -->
+			</div><!-- .col-md-4 -->
+			<div class="col-md-8 pull-right">
+				<a class="pull-right" href="http://brasa.art.br">
+					<img src="<?php bloginfo('template_url');?>/assets/images/brasa.jpg">
+				</a>
+				<a class="pull-right" href="http://www.acaoeducativa.org/">
+					<img src="<?php bloginfo('template_url');?>/assets/images/acaoeducativa.jpg">
+				</a>
+			</div><!-- .col-md-8 pull-right -->
+		</div><!-- .row -->
 	</div><!-- .container -->
-
-	<?php wp_footer(); ?>
+</footer><!-- #footer -->
+<?php wp_footer(); ?>
 </body>
 </html>

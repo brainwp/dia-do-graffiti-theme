@@ -318,6 +318,6 @@ function custom_css() {
 }
 add_action('wp_footer', 'custom_css');
 function custom_excerpt_length( $length ) {
-	return 80;
+	return 60;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

@@ -83,8 +83,14 @@ $odin_theme_options->set_fields(
 		),
 		'geral_section' => array(
 			'tab'   => 'geral_cfg', // Sessão da aba odin_general
-			'title' => __('Configurações da página inicial','odin'),
+			'title' => __('Configurações visuais','odin'),
 			'fields' => array(
+				array(
+					'id' => 'logo',
+					'label' => __('Logo nas páginas internas','odin'),
+					'type' => 'image',
+					//'default' => '#2c989a',
+				),
 				array(
 					'id' => 'cor_principal',
 					'label' => __('Cor principal','odin'),
@@ -117,6 +123,25 @@ $odin_theme_options->set_fields(
 				),
 			)
 		),
+		'geral_section_social' => array(
+			'tab'   => 'geral_cfg', // Sessão da aba odin_general
+			'title' => __('Configurações de redes sociais','odin'),
+			'fields' => array(
+				array(
+					'id' => 'hashtag',
+					'label' => __('Hashtag oficial do evento','odin'),
+					'type' => 'text',
+					//'default' => 'Assine nosso Newsletter',
+				),
+				array(
+					'id' => 'hastag_url',
+					'label' => __('URL da página de visualização da hashtag','odin'),
+					'type' => 'text',
+					//'default' => 'Assine nosso Newsletter',
+				),
+			)
+		),
+
 	)
 );
 ?>

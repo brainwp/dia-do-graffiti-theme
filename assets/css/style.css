@@ -28,8 +28,15 @@ nav#menu-top li a{
 #slider-home .pull-right div.slick_slide img{
 	width:100%;
 }
+@media screen and (max-width: 800px) {
+	#slider-home .pull-right{
+		width:100%;
+		clear:both;
+	}
+}
 #slider-home{
-	background:url('../images/bg-slider-home.jpg') repeat;
+	background:url('../images/bg-noticias.jpg') no-repeat;
+	background-size:cover;
 }
 #slider-home .container{
 	padding-top:20px;
@@ -115,9 +122,16 @@ nav#menu-top li a{
 #infos-home .agenda .agenda-content .separator:last-child{
 	display:none;
 }
+@media screen and (max-width: 800px) {
+	#infos-home .agenda header, #infos-home .col-md-4, #infos-home .agenda-content{
+		width:100%;
+		clear:both;
+	}
+}
 /*noticias query */
 #noticias-home{
-	background:url('../images/bg-noticias.jpg') repeat;
+	background:url('../images/bg-noticias.jpg') no-repeat;
+	background-size:cover;
 }
 #noticias-home h3.section-title{
 	color:white;
@@ -176,6 +190,11 @@ nav#menu-top li a{
 	font-weight: 400;
 	height:220px;
 }
+#noticias-home .content-noticias .text p{
+	font-size:0.9em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
 #noticias-home .content-noticias{
 	padding-bottom:10px;
 	display:block;
@@ -215,4 +234,57 @@ nav#menu-top li a{
 }
 #barra-newsletter input:last-child{
 	margin-top:0;
+}
+/*Hashtag do evento na home */
+#hashtag{
+	height:450px;
+	overflow: hidden;
+	padding:0;
+}
+.home #hashtag #tggr-loading-new-posts{
+	display:none !important;
+}
+#hashtag .barra{
+	width:100%;
+	text-decoration: none !important;
+	display:block;
+	position: absolute;
+	bottom:0;
+	background:#1fa9b4;
+	margin:0;
+	text-align: center;
+}
+#hashtag .barra h3{
+	color:white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+#hashtag .barra h3 span{
+	font-weight: 700;
+}
+/* footer */
+#footer-creditos{
+	background:url('../images/bg-footer.jpg') top center no-repeat;
+	background-size:cover;
+}
+#footer-creditos{
+	padding-top:20px;
+	padding-bottom:120px;
+}
+#footer-creditos *{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+/* Page / page.php */
+#page-single{
+	width:100%;
+}
+#page-single .barra-title{
+	width:100%;
+	background:url('../images/bg-noticias.jpg') no-repeat;
+	background-size:cover;
+}
+#page-single .barra-title h1{
+	color:white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
