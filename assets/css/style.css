@@ -51,6 +51,8 @@ nav#menu-top li a{
 #infos-home{
 	padding-top:10px;
 	padding-bottom:10px;
+	background:url('../images/bg-infos-home.jpg') left no-repeat;
+	background-size:cover;
 }
 #infos-home .site-description h3{
 	font-family: 'Source Sans Pro', sans-serif;
