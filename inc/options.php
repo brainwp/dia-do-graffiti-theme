@@ -89,7 +89,6 @@ $odin_theme_options->set_fields(
 					'id' => 'logo',
 					'label' => __('Logo nas páginas internas','odin'),
 					'type' => 'image',
-					//'default' => '#2c989a',
 				),
 				array(
 					'id' => 'cor_principal',

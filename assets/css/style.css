@@ -303,3 +303,64 @@ nav#menu-top li a{
 	padding-bottom:20px;
 	font-size:0.9em;
 }
+/* REVEAL MODAL AGENDA */
+
+.reveal-modal>div.container>div.row{
+	padding-top: 1.25rem;
+}
+.reveal-modal{
+	padding:0 !important;
+	background:url('../images/bg-reveal-modal.jpg') no-repeat;
+	background-size:cover;
+}
+.reveal-modal .next-post-reveal-nav,.reveal-modal .next-post-reveal-nav{
+	display:none !important;
+}
+.reveal-modal h1.post-title-reveal{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+.reveal-modal div.row{
+	padding-left: 1.25rem;
+	padding-right:1.25rem;
+}
+.reveal-modal h2.reveal-data{
+	color:white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size:2.6em;
+}
+.reveal-modal h4.reveal-hora{
+	padding-top:20px;
+	color:white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size:1.6em;
+}
+.reveal-modal .reveal-container-content .img-container, .reveal-modal .reveal-container-content .reveal-content{
+	margin-top:20px;
+}
+.reveal-modal .reveal-container-content{
+	padding-bottom:1.25rem;
+}
+.reveal-modal .reveal-container-content{
+	max-width:100% !important;
+	font-size:0.9em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	word-break: break-all;
+}
+.reveal-modal .reveal-container-content p{
+	word-break: break-all;
+}
+.reveal-modal .reveal-container-content .price{
+	background:#2c989a;
+	color:white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	display:inline-block;
+	font-size:1.1em;
+	padding:7px;
+	text-transform: lowercase;
+	border-radius:7px;
+}
