@@ -5,16 +5,8 @@ $options = get_option('home_cfg');
 <section id="noticias-home" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<h3 class="col-md-4 section-title pull-left"><?php _e('Notícias','odin');?></h3>
-			<div class="col-md-5 pull-right categories">
-				<?php $categories = get_categories( array('parent' => 0) ); ?>
-				<?php foreach($categories as $cat): ?>
-				    <a href="<?php echo get_category_link($cat->term_id);?>">
-				    	<?php echo $cat->name;?>
-				    </a>
-			    <?php endforeach; ?>
-			</div><!-- .col-md-9 pull-right categories -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
+			<?php get_template_part('parts/noticias-header');?>
 			<?php
 			// WP_Query argument
 			$args = array (

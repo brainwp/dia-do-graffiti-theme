@@ -91,3 +91,20 @@ if ( ! function_exists( 'odin_paging_nav' ) ) {
 		echo odin_pagination( $mid, $end, false );
 	}
 }
+if ( ! function_exists( 'odin_get_post_archive' ) ) {
+
+	/**
+	 * Return post archive link
+	 *
+	 * @since 2.2.0
+	 *
+	 * @return $link
+	 */
+	function odin_get_post_archive() {
+		$option = get_option('page_for_posts');
+		$link = get_permalink($option);
+		if(!$link || empty($link))
+			return home_url('/');
+		return $link;
+	}
+}
