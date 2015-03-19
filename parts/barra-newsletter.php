@@ -12,9 +12,11 @@ $options = get_option('geral_cfg');
 				<?php echo esc_textarea($options['newsletter_text']);?>
 			</div><!-- .col-md-4 text -->
 			<form class="col-md-4" action="<?php echo home_url('/');?>" method="get">
-				<input type="text" name="alo_em_opt_email" class="col-md-12" placeholder="<?php _e('E-mail','odin');?>"/>
-				<input type="text" name="alo_em_opt_name" class="col-md-10" placeholder="<?php _e('Nome','odin');?>"/>
-				<button class="pull-right css-cor"><?php _e('Ok','odin');?></button>
+				<?php
+				$istance = array( "title" => "");
+				$args = array();
+				the_widget("ALO_Easymail_Widget", $istance, $args );
+				?>
 			</form><!-- .col-md-4 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
