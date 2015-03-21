@@ -5,7 +5,7 @@ $options = get_option('home_cfg');
 <section id="infos-home" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 site-description">
+			<div class="col-md-5 site-description">
 				<h3 class="css-cor"><?php echo esc_textarea($options['content_title']);?></h3>
 				<p><?php echo esc_textarea($options['content_text']);?></p>
 			</div><!-- .col-md-4 site-description -->
@@ -20,31 +20,39 @@ $options = get_option('home_cfg');
 					<?php echo esc_textarea($options['link_3_title']);?>
 				</a>
 			</div><!-- .col-md-4 links-rapidos -->
-			<div class="col-md-4 agenda">
+			<div class="col-md-3 agenda">
 				<header class="col-md-12">
 					<h3 class="col-md-8 pull-left"><?php _e('Agenda de Ações','odin');?></h3>
 					<a class="link-agenda pull-right bg-cor"><?php _e('Todas','odin');?></a>
 				</header>
 				<div class="agenda-content col-md-12">
+					
 					<?php
-					// WP_Query argument
-					$args = array (
-						'post_type'              => 'agenda',
-						'posts_per_page'         => '3',
-						'orderby'                => 'meta_value',
-						'meta_key'               => 'data_inicio',
-						'order'                  => 'DESC'
-					);
-					// The Query
-					$query = new WP_Query( $args );
-					if ( $query->have_posts() ):
-						while ( $query->have_posts() ): $query->the_post();
-					       get_template_part('content','agenda');
-					    endwhile;
-				    endif;
-				    // Restore original Post Data
-				    wp_reset_postdata();
+						// WP_Query argument
+						$args = array (
+							'post_type'              => 'agenda',
+							'posts_per_page'         => '3',
+							'orderby'                => 'meta_value',
+							'meta_key'               => 'data_inicio',
+							'order'                  => 'DESC'
+						);
+						// The Query
+						$query = new WP_Query( $args );
+						if ( $query->have_posts() ) :
+						
+							while ( $query->have_posts() ): $query->the_post();
+						       get_template_part( 'content','agenda' );
+						    endwhile;
+						
+						else :
+							echo '<span class="no-event">';
+							_e( 'No registered event', 'odin' );
+							echo '<span>';
+					    endif;
+					    // Restore original Post Data
+					    wp_reset_postdata();
 				    ?>
+
 				</div><!-- .agenda-content -->
 			</div><!-- .col-md-4 agenda -->
 		</div><!-- .row -->
