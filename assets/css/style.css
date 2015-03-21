@@ -64,6 +64,9 @@ nav .default-menu li {
 	background:url('../images/bg-infos-home.jpg') left no-repeat;
 	background-size:cover;
 }
+#infos-home .site-description {
+	margin-top: 0;
+}
 #infos-home .site-description h3{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;

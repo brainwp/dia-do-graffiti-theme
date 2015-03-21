@@ -320,3 +320,24 @@ function custom_excerpt_length( $length ) {
 	return 60;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+function show_message_admin( $message ) {
+	echo '<div id="message" class="error">';
+	echo "<p>$message</p></div>";
+}
+
+function check_plugins() {
+	$m = 'É necessário instalar, ativar e configurar o(s) plugin(s)';
+	if ( ! is_plugin_active( 'tagregator/bootstrap.php' ) ) {
+		$m .= ' <a target= \"_blank\" href="https://wordpress.org/plugins/tagregator">Tagregator</a>';
+	}
+	if ( ! is_plugin_active( 'alo-easymail/alo-easymail.php' ) ) {
+		$m .= ', <a target= \"_blank\" href="http://wordpress.org/plugins/alo-easymail">ALO EasyMail Newsletter</a>';
+	}
+	$m .= '.';
+	if ( strpos( $m,'target' ) == true ) {
+		show_message_admin( $m );
+	}
+}
+add_action( 'admin_notices', 'check_plugins' );
