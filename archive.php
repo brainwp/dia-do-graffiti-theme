@@ -55,6 +55,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_sidebar(); ?>
+<div class="margin-footer"></div>
+<?php get_footer(); ?>

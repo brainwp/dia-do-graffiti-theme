@@ -27,5 +27,6 @@ get_header(); ?>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #noticias-home -->
+<div class="margin-footer"></div>
 <?php
 get_footer();

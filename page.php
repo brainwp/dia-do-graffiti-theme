@@ -21,6 +21,6 @@ get_header(); ?>
 				endwhile;
 			?>
 
-<?php
-get_template_part('/parts/barra-newsletter');
-get_footer();
+<?php get_template_part('/parts/barra-newsletter'); ?>
+<div class="margin-footer"></div>
+<?php get_footer(); ?>

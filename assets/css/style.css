@@ -66,6 +66,7 @@ nav.internal-menu .default-menu {
 	padding-bottom:10px;
 	background:url('../images/bg-infos-home.jpg') left no-repeat;
 	background-size:cover;
+	background-color: #FFF;
 }
 #infos-home .site-description {
 	margin-top: 0;
@@ -101,6 +102,7 @@ nav.internal-menu .default-menu {
 	padding-top:6px;
 	padding-bottom:10px;
 	position: absolute;
+	z-index: 9;
 }
 #infos-home .agenda h3{
 	color:white;
@@ -117,7 +119,6 @@ nav.internal-menu .default-menu {
 	padding-top: 10px;
 	position: relative;
 	width:92%;
-	z-index: -1;
 }
 #infos-home .agenda .agenda-content>a{
 	text-decoration: none !important;
@@ -175,6 +176,7 @@ nav.internal-menu .default-menu {
 	font-size:2.6em;
 }
 #noticias-home .categories{
+	padding-bottom:2%;
 	padding-top:2%;
 }
 #noticias-home .categories a{
@@ -196,6 +198,9 @@ nav.internal-menu .default-menu {
 }
 #noticias-home .categories a:last-child::after{
 	display:none;
+}
+#noticias-home .content-noticias {
+	margin-bottom: 15px;
 }
 #noticias-home .content-noticias img{
 	width:100%;
@@ -226,7 +231,7 @@ nav.internal-menu .default-menu {
 	height:220px;
 }
 #noticias-home .content-noticias .text p{
-	font-size:0.9em;
+	font-size: 14px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 }
@@ -272,6 +277,7 @@ nav.internal-menu .default-menu {
 }
 /*Hashtag do evento na home */
 #hashtag{
+	background-color: #FFF;
 	height:450px;
 	overflow: hidden;
 	padding:0;
@@ -298,9 +304,19 @@ nav.internal-menu .default-menu {
 	font-weight: 700;
 }
 /* footer */
+.margin-footer {
+	clear: both;
+	display: block;
+	height: 1px;
+	margin-bottom: 194px;
+	width: 100%;
+}
 #footer-creditos{
 	background:url('../images/bg-footer.jpg') top center no-repeat;
 	background-size:cover;
+	bottom: 0;
+	position: fixed;
+	z-index: -14;
 }
 #footer-creditos{
 	padding-top:20px;
