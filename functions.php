@@ -341,3 +341,36 @@ function check_plugins() {
 	}
 }
 add_action( 'admin_notices', 'check_plugins' );
+
+if (isset($_GET['activated']) && is_admin()){
+	$page_title = 'Sobre o Dia do Graffiti';
+	$page_content = 'Adicione aqui o texto referente ao Dia do Graffiti';
+	$page_check = get_page_by_title( $page_title );
+	$page = array(
+			'post_type' => 'page',
+			'post_title' => $page_title,
+			'post_content' => $page_content,
+			'post_status' => 'publish',
+			'post_author' => 1,
+	);
+	if(!isset( $page_check->ID )){
+		$page_id = wp_insert_post( $page );
+	}
+
+	wp_insert_term(
+		__('Na mídia', 'odin'),
+		'category',
+		array(
+		  'description'	=> '',
+		  'slug' 		=> __('na-midia', 'odin')
+		)
+	);
+	wp_insert_term(
+		__('Cobertura do Evento', 'odin'),
+		'category',
+		array(
+		  'description'	=> '',
+		  'slug' 		=> __('cobertura-do-evento', 'odin')
+		)
+	);
+}
