@@ -79,6 +79,7 @@ nav.internal-menu .default-menu {
 }
 #infos-home .site-description p{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
 }
 #infos-home .links-rapidos a{
 	display:block;
@@ -299,6 +300,7 @@ nav.internal-menu .default-menu {
 	color:white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
+	margin-bottom: 20px;
 }
 #hashtag .barra h3 span{
 	font-weight: 700;
@@ -333,7 +335,7 @@ nav.internal-menu .default-menu {
 }
 #page-single *{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;
+	/*font-weight: 300;*/
 }
 #page-single .barra-title{
 	width:100%;
@@ -352,7 +354,7 @@ nav.internal-menu .default-menu {
 #page-single>div.container>div.row{
 	padding-top:20px;
 	padding-bottom:20px;
-	font-size:0.9em;
+	font-size:14px;
 }
 /* REVEAL MODAL AGENDA */
 
