@@ -276,6 +276,26 @@ nav.internal-menu .default-menu {
 #barra-newsletter input:last-child{
 	margin-top:0;
 }
+#barra-newsletter .input-text {
+	margin-bottom: 3px;
+	width: 100%;
+}
+.alo_easymail_form_table {
+	width: 100%;
+}
+.alo_easymail_form_table td:first-child {
+	width: 20%;
+}
+.alo_easymail_form_table td:last-child {
+	width: 80%;
+}
+.alo_easymail_form_table label {
+	color: #CCC;
+	font-weight: lighter;
+}
+#barra-newsletter .widget {
+	margin-bottom: 0;
+}
 /*Hashtag do evento na home */
 #hashtag{
 	background-color: #FFF;
