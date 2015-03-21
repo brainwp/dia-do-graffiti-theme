@@ -125,11 +125,11 @@ nav.internal-menu .default-menu {
 	text-decoration: none !important;
 	display:block;
 }
-#infos-home .agenda .agenda-content h3{
+#infos-home .agenda .agenda-content h4{
 	color:black;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
-	font-size:2.1em;
+	font-size:1.5em;
 	margin-bottom:0;
 }
 #infos-home .agenda .agenda-content small{
@@ -165,7 +165,7 @@ nav.internal-menu .default-menu {
 		clear:both;
 	}
 }
-/*noticias query */
+/* Noticias Query */
 #noticias-home{
 	background:url('../images/bg-noticias.jpg') no-repeat;
 	background-size:cover;
@@ -231,15 +231,33 @@ nav.internal-menu .default-menu {
 	font-weight: 400;
 	height:220px;
 }
+.wrap-each {
+	overflow: hidden;
+	position: relative;
+}
 #noticias-home .content-noticias .text p{
 	font-size: 14px;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
 }
 #noticias-home .content-noticias{
 	padding-bottom:10px;
 	display:block;
 	text-decoration: none !important;
+}
+.wrap-each .permalink {
+	color: #FFF;
+	height: 50px;
+	padding: 15px;
+	border-radius: 50%;
+	right: 30px; 
+	text-align: center;
+	position: absolute;
+	top: 170px;
+	width: 50px;
+	text-decoration: none;
+}
+.wrap-each .permalink:hover {
+	background-color: #666 !important;
 }
 /* Barra de Newsletter / Cadastro de email */
 #barra-newsletter{
