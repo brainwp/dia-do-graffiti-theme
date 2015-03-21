@@ -23,24 +23,36 @@ $options = get_option('home_cfg');
 </head>
 
 <body <?php body_class(); ?>>
+
 	<nav id="menu-top" class="col-md-12 barra-bg">
 		<div class="container">
 			<div class="row">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main-menu',
-						'depth'          => 2,
-						'container'      => false,
-						'menu_class'     => 'nav navbar-nav',
-						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-						'walker'         => new Odin_Bootstrap_Nav_Walker()
-					)
-				);
-				?>
+				<?php if ( has_nav_menu( 'main-menu' ) ) : ?>
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
+							)
+						);
+					?>
+				<?php else : ?>
+					<?php if ( is_user_logged_in() && current_user_can( 'administrator' ) ) : ?>
+						<a class="css-cor" href="<?php echo admin_url( 'nav-menus.php' ); ?>"><?php _e( 'Create your first menu', 'odin' ); ?></a>
+					<?php else : ?>
+						<ul class="default-menu">
+							<?php echo wp_list_pages( 'title_li=' ); ?>
+						</ul><!-- default-menu -->
+					<?php endif; ?>
+				<?php endif; ?>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</nav><!-- #menu-top.col-md-12 -->
+
 	<section id="slider-home" class="col-md-12">
 		<?php $style = wp_get_attachment_image_src($options['slider_bg'],'large');?>
 		<?php $style = 'background-image:url('.$style[0].');'?>
@@ -52,7 +64,7 @@ $options = get_option('home_cfg');
 					</div><!-- .col-md-10 col-md-offset-2 -->
 				</div><!-- .col-md-4 pull-left -->
 				<div class="col-md-7 pull-right">
-					<?php echo do_shortcode('[brasa_slider name="Slider Home" size="large"]');?>
+					<?php echo apply_filters( 'the_content', $options[ 'short_slider' ] ); ?> 
 				</div><!-- .col-md-8 pull-right -->
 			</div><!-- .row -->
 		</div><!-- .container -->

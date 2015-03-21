@@ -30,8 +30,13 @@ $odin_theme_options->set_fields(
 				),
 				array(
 					'id' => 'slider_bg',
-					'label' => __('Imagem de fundo do slider/logo','odin'),
+					'label' => __('Background image header','odin'),
 					'type' => 'image',
+				),
+				array(
+					'id' => 'short_slider',
+					'label' => __('Shortcode of slider in home','odin'),
+					'type' => 'text',
 				),
 				array(
 					'id' => 'content_title',
@@ -47,7 +52,7 @@ $odin_theme_options->set_fields(
 		),
 		'links_section' => array(
 			'tab'   => 'home_cfg', // Sessão da aba odin_general
-			'title' => __('Links rápidos','odin'),
+			'title' => __('Fast links','odin'),
 			'fields' => array(
 				array(
 					'id' => 'link_1_title',

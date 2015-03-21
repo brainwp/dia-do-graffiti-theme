@@ -7,7 +7,8 @@ Description: Odin main stylesheet.
 	height:1px;
 	clear:both;
 }
-/* menu nav */
+
+/* Menu Nav */
 nav#menu-top{
 	background:#1f1f1f;
 	padding-top:10px;
@@ -19,6 +20,15 @@ nav#menu-top li a{
 	font-size:1.2em;
 	font-weight: 400;
 	background: inherit !important;
+}
+nav .default-menu {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+nav .default-menu li {
+	float: left;
+	margin-left: 20px;
+	list-style: none;
 }
 /* Slider home */
 #slider-home .pull-right div.slick_slide{
