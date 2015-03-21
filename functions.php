@@ -300,6 +300,7 @@ if ( is_woocommerce_activated() ) {
 require get_template_directory() . '/inc/options.php';
 /* Advanced Custom fields */
 require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
+require get_template_directory() . '/inc/fields.php';
 /*custom post types */
 require get_template_directory() . '/inc/cpt.php';
 /*css personalizado */
