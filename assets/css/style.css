@@ -30,6 +30,9 @@ nav .default-menu li {
 	margin-left: 20px;
 	list-style: none;
 }
+nav.internal-menu .default-menu {
+	margin-top: 25px;
+}
 /* Slider home */
 #slider-home .pull-right div.slick_slide{
 	height:250px;
