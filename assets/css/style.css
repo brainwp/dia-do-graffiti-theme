@@ -34,6 +34,10 @@ nav.internal-menu .default-menu {
 	margin-top: 25px;
 }
 /* Slider home */
+.logo img {
+	height: auto;
+	max-width: 300px;
+}
 #slider-home .pull-right div.slick_slide{
 	height:250px;
 	overflow: hidden;
@@ -58,7 +62,7 @@ nav.internal-menu .default-menu {
 	background-repeat: no-repeat;
 }
 #slider-home .pull-left{
-	margin-top:6%;
+	margin-top:3%;
 }
 /* Informações na home */
 #infos-home{
