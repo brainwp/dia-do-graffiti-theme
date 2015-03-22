@@ -24,6 +24,10 @@ $options = get_option('home_cfg');
 
 <body <?php body_class(); ?>>
 
+	<?php $style = wp_get_attachment_image_src($options['slider_bg'],'large');?>
+	<?php $style = 'background-image:url('.$style[0].');'?>
+	<div class="bg-slider" style="<?php echo esc_attr($style);?>">
+
 	<nav id="menu-top" class="col-md-12 barra-bg">
 		<div class="container">
 			<div class="row">
@@ -54,9 +58,7 @@ $options = get_option('home_cfg');
 	</nav><!-- #menu-top.col-md-12 -->
 
 	<section id="slider-home" class="col-md-12">
-		<?php $style = wp_get_attachment_image_src($options['slider_bg'],'large');?>
-		<?php $style = 'background-image:url('.$style[0].');'?>
-		<div class="container" style="<?php echo esc_attr($style);?>">
+		<div class="container" style="">
 			<div class="row">
 				<div class="col-md-4 pull-left">
 					<div class="col-md-10 col-md-offset-2 logo">
