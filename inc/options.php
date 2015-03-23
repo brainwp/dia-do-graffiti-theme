@@ -145,7 +145,18 @@ $odin_theme_options->set_fields(
 				),
 			)
 		),
-
+		'geral_section_equioe' => array(
+			'tab'   => 'geral_cfg', // Sessão da aba odin_general
+			'title' => __('Configurações da página equipe','odin'),
+			'fields' => array(
+				array(
+					'id' => 'equipe_title',
+					'label' => __('Título da página equipe','odin'),
+					'type' => 'text',
+					//'default' => 'Assine nosso Newsletter',
+				),
+			)
+		),
 	)
 );
 ?>

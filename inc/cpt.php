@@ -41,6 +41,41 @@ function custom_post_types() {
 	);
 	register_post_type( 'agenda', $args );
 
+	$labels = array(
+		'name'                => _x( 'Membros', 'Post Type General Name', 'odin' ),
+		'singular_name'       => _x( 'Equipe', 'Post Type Singular Name', 'odin' ),
+		'menu_name'           => __( 'Equipe', 'odin' ),
+		'parent_item_colon'   => __( 'Item parente', 'odin' ),
+		'all_items'           => __( 'Todos membros', 'odin' ),
+		'view_item'           => __( 'Ver membro', 'odin' ),
+		'add_new_item'        => __( 'Editar membro', 'odin' ),
+		'add_new'             => __( 'Adicionar novo', 'odin' ),
+		'edit_item'           => __( 'Editar membro', 'odin' ),
+		'update_item'         => __( 'Atualizar membro', 'odin' ),
+		'search_items'        => __( 'Buscar membro', 'odin' ),
+		'not_found'           => __( 'Não encontrado', 'odin' ),
+		'not_found_in_trash'  => __( 'Não encontrado na lixeira', 'odin' ),
+	);
+	$args = array(
+		'label'               => __( 'equipe', 'odin' ),
+		'description'         => __( 'Equipe', 'odin' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'thumbnail', ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-groups',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'equipe', $args );
 }
 
 // Hook into the 'init' action
