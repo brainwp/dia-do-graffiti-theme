@@ -303,6 +303,25 @@ require get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 require get_template_directory() . '/inc/fields.php';
 /*custom post types */
 require get_template_directory() . '/inc/cpt.php';
+/*class active plugins */
+require get_template_directory() . '/inc/class-active-plugins.php';
+global $plugins;
+$plugins = new Brasa_Active_Plugins(
+	array(
+		'plugin1/plugin1.php' => array(
+				'name' => 'Plugin Legal Nexiste',
+				'url'  => '#nexiste1'
+		),
+		'plugin2/plugin2.php' => array(
+			'name' => 'Plugin Legal Nexiste2',
+			'url'  => '#nexiste1'
+		),
+		'plugin3/plugin2.php' => array(
+			'name' => 'Plugin Legal Nexiste2',
+			'url'  => '#nexiste3'
+		),
+	)
+);
 /*css personalizado */
 function custom_css() {
     if(!get_option('home_cfg'))
@@ -321,57 +340,3 @@ function custom_excerpt_length( $length ) {
 	return 60;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
-function show_message_admin( $message ) {
-	echo '<div id="message" class="error">';
-	echo "<p>$message</p></div>";
-}
-
-function check_plugins() {
-	$m = 'É necessário instalar, ativar e configurar o(s) plugin(s)';
-	if ( ! is_plugin_active( 'tagregator/bootstrap.php' ) ) {
-		$m .= ' <a target= \"_blank\" href="https://wordpress.org/plugins/tagregator">Tagregator</a>';
-	}
-	if ( ! is_plugin_active( 'alo-easymail/alo-easymail.php' ) ) {
-		$m .= ', <a target= \"_blank\" href="http://wordpress.org/plugins/alo-easymail">ALO EasyMail Newsletter</a>';
-	}
-	$m .= '.';
-	if ( strpos( $m,'target' ) == true ) {
-		show_message_admin( $m );
-	}
-}
-add_action( 'admin_notices', 'check_plugins' );
-
-if (isset($_GET['activated']) && is_admin()){
-	$page_title = 'Sobre o Dia do Graffiti';
-	$page_content = 'Adicione aqui o texto referente ao Dia do Graffiti';
-	$page_check = get_page_by_title( $page_title );
-	$page = array(
-			'post_type' => 'page',
-			'post_title' => $page_title,
-			'post_content' => $page_content,
-			'post_status' => 'publish',
-			'post_author' => 1,
-	);
-	if(!isset( $page_check->ID )){
-		$page_id = wp_insert_post( $page );
-	}
-
-	wp_insert_term(
-		__('Na mídia', 'odin'),
-		'category',
-		array(
-		  'description'	=> '',
-		  'slug' 		=> __('na-midia', 'odin')
-		)
-	);
-	wp_insert_term(
-		__('Cobertura do Evento', 'odin'),
-		'category',
-		array(
-		  'description'	=> '',
-		  'slug' 		=> __('cobertura-do-evento', 'odin')
-		)
-	);
-}
