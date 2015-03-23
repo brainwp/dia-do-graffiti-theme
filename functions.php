@@ -309,7 +309,7 @@ function custom_css() {
     	return;
     $option = get_option('geral_cfg');
     $css = '<style>';
-    $css .= '.css-cor{color:'.$option['cor_principal'] . ' !important;}';
+    $css .= '.css-cor,#page-single #secondary .widget-title{color:'.$option['cor_principal'] . ' !important;}';
     $css .= '.bg-cor{background-color:'.$option['cor_principal'] . ' !important;}';
     $css .= '#menu-top li a{color:'.$option['cor_principal']. ' !important;}';
     $css .= '.barra-bg{background-color:'.$option['cor_barra']. ' !important;}';
