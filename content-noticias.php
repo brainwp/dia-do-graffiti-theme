@@ -11,6 +11,7 @@
 			<?php endif;?>
 		</div><!-- .img-container -->
 		<div class="text">
+			<div class="fade-item"></div>
 			<h3 class="css-cor"><?php the_title();?></h3>
 			<?php the_excerpt();?>
 		</div><!-- .col-md-12 text -->

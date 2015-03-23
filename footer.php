@@ -23,11 +23,11 @@
 				</div><!-- .col-md-12 -->
 			</div><!-- .col-md-4 -->
 			<div class="col-md-8 pull-right">
-				<a class="pull-right" href="http://brasa.art.br">
-					<img src="<?php bloginfo('template_url');?>/assets/images/brasa.jpg">
+				<a target="_blank" class="pull-right" href="http://brasa.art.br">
+					<img alt="Brasa" src="<?php bloginfo('template_url');?>/assets/images/brasa.jpg">
 				</a>
-				<a class="pull-right" href="http://www.acaoeducativa.org/">
-					<img src="<?php bloginfo('template_url');?>/assets/images/acaoeducativa.jpg">
+				<a target="_blank" class="pull-right" href="http://www.acaoeducativa.org/">
+					<img alt="Ação Educativa" src="<?php bloginfo('template_url');?>/assets/images/acaoeducativa.jpg">
 				</a>
 			</div><!-- .col-md-8 pull-right -->
 		</div><!-- .row -->
