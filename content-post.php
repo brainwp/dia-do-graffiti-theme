@@ -17,7 +17,7 @@
 	</div><!-- .barra-title -->
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 				<?php the_content();?>
 			</div><!-- .col-md-8 -->
 			<?php get_sidebar('post');?>

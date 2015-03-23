@@ -271,7 +271,7 @@ nav.internal-menu .navbar-nav {
 	height: 50px;
 	padding: 15px;
 	border-radius: 50%;
-	right: 30px; 
+	right: 30px;
 	text-align: center;
 	position: absolute;
 	top: 170px;
@@ -415,6 +415,10 @@ nav.internal-menu .navbar-nav {
 	padding-top:20px;
 	padding-bottom:20px;
 	font-size:14px;
+}
+#page-single #secondary{
+	background:#f4f4f4;
+	padding:10px;
 }
 /* REVEAL MODAL AGENDA */
 .reveal-modal>div.container>div.row{
