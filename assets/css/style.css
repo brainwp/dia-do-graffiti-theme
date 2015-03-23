@@ -75,7 +75,7 @@ nav.internal-menu .default-menu {
 	background-repeat: no-repeat;
 }
 #slider-home .pull-left{
-	margin-top:3%;
+	margin-top:5%;
 }
 /* Informações na home */
 #infos-home{
@@ -141,6 +141,7 @@ nav.internal-menu .default-menu {
 #infos-home .agenda .agenda-content>a{
 	text-decoration: none !important;
 	display:block;
+	margin-bottom: 10px;
 }
 #infos-home .agenda .agenda-content h4{
 	color:black;
@@ -188,6 +189,7 @@ nav.internal-menu .default-menu {
 	background-size:cover;
 	margin-top: 90px;
 }
+.home #noticias-home { margin-top: 0 }
 #noticias-home h3.section-title{
 	color:white;
 	font-family: 'Source Sans Pro', sans-serif;
