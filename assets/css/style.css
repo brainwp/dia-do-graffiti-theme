@@ -650,3 +650,33 @@ nav.internal-menu .navbar-nav {
 		top:inherit;
 	}
 }
+/* Page Contato */
+body.contato .row > p {
+	float: left;
+	width: 50%;
+}
+
+body.contato .wpcf7 {
+	float: left;
+	margin-left: 3%;
+	width: 47%;
+}
+
+body.contato .wpcf7 input[type="text"],
+body.contato .wpcf7 input[type="email"],
+body.contato .wpcf7 textarea,
+.wpcf7-form-control-wrap
+body.contato .wpcf7-form p {
+	width: 100%;
+}
+
+body.contato .wpcf7 input[type="text"],
+body.contato .wpcf7 input[type="email"],
+body.contato .wpcf7 input[type="submit"],
+body.contato .wpcf7 textarea {
+	border: none;
+	border-radius: 30px;
+	background-color: #2B2B2B;
+	color: #FFF;
+	padding: 8px 14px;
+}

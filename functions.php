@@ -340,3 +340,13 @@ function custom_excerpt_length( $length ) {
 	return 60;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//Page Slug Class
+function add_body_class( $classes = "" ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_body_class' );
