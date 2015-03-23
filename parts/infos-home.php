@@ -9,7 +9,7 @@ $options = get_option('home_cfg');
 				<h3 class="css-cor"><?php echo esc_textarea($options['content_title']);?></h3>
 				<p><?php echo esc_textarea( $options['content_text'] );?></p>
 			</div><!-- .col-md-4 site-description -->
-			<div class="col-md-4 links-rapidos">
+			<div class="col-md-3 links-rapidos">
 				<a class="bg-cor" href="<?php echo esc_url($options['link_1_url']);?>">
 					<?php echo esc_textarea( $options['link_1_title'] );?>
 				</a>
@@ -20,9 +20,9 @@ $options = get_option('home_cfg');
 					<?php echo esc_textarea( $options['link_3_title'] );?>
 				</a>
 			</div><!-- .col-md-4 links-rapidos -->
-			<div class="col-md-3 agenda">
+			<div class="col-md-4 agenda">
 				<header class="col-md-12">
-					<h3 class="col-md-8 pull-left"><?php _e('Agenda de Ações','odin');?></h3>
+					<h3 class=""><?php _e('Agenda de Ações','odin');?></h3>
 					<a class="link-agenda pull-right bg-cor"><?php _e('Todas','odin');?></a>
 				</header>
 				<div class="agenda-content col-md-12">
