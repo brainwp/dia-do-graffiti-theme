@@ -42,23 +42,23 @@ function custom_post_types() {
 	register_post_type( 'agenda', $args );
 
 	$labels = array(
-		'name'                => _x( 'Membros', 'Post Type General Name', 'odin' ),
-		'singular_name'       => _x( 'Equipe', 'Post Type Singular Name', 'odin' ),
-		'menu_name'           => __( 'Equipe', 'odin' ),
+		'name'                => _x( 'Curadores', 'Post Type General Name', 'odin' ),
+		'singular_name'       => _x( 'Curadores', 'Post Type Singular Name', 'odin' ),
+		'menu_name'           => __( 'Curadores', 'odin' ),
 		'parent_item_colon'   => __( 'Item parente', 'odin' ),
-		'all_items'           => __( 'Todos membros', 'odin' ),
-		'view_item'           => __( 'Ver membro', 'odin' ),
-		'add_new_item'        => __( 'Editar membro', 'odin' ),
+		'all_items'           => __( 'Todos curadores', 'odin' ),
+		'view_item'           => __( 'Ver curador', 'odin' ),
+		'add_new_item'        => __( 'Editar curador', 'odin' ),
 		'add_new'             => __( 'Adicionar novo', 'odin' ),
-		'edit_item'           => __( 'Editar membro', 'odin' ),
-		'update_item'         => __( 'Atualizar membro', 'odin' ),
-		'search_items'        => __( 'Buscar membro', 'odin' ),
+		'edit_item'           => __( 'Editar curador', 'odin' ),
+		'update_item'         => __( 'Atualizar curador', 'odin' ),
+		'search_items'        => __( 'Buscar curador', 'odin' ),
 		'not_found'           => __( 'Não encontrado', 'odin' ),
 		'not_found_in_trash'  => __( 'Não encontrado na lixeira', 'odin' ),
 	);
 	$args = array(
-		'label'               => __( 'equipe', 'odin' ),
-		'description'         => __( 'Equipe', 'odin' ),
+		'label'               => __( 'curadores', 'odin' ),
+		'description'         => __( 'Curadores', 'odin' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
 		'hierarchical'        => false,
@@ -75,7 +75,7 @@ function custom_post_types() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 	);
-	register_post_type( 'equipe', $args );
+	register_post_type( 'curadores', $args );
 }
 
 // Hook into the 'init' action

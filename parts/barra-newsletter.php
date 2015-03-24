@@ -13,7 +13,7 @@ $options = get_option('geral_cfg');
 			</div><!-- .col-md-4 text -->
 			<form class="col-md-4" action="<?php echo home_url('/');?>" method="get">
 				<?php
-				$istance = array( "title" => "");
+				$istance = array( "title" => "Newsletter");
 				$args = array();
 				the_widget("ALO_Easymail_Widget", $istance, $args );
 				?>

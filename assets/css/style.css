@@ -513,16 +513,16 @@ nav.internal-menu .navbar-nav {
 	text-decoration: none;
 }
 /* archive curadoria */
- .post-type-archive-equipe #content {
+ .post-type-archive-curadores #content {
  	width: 89%;
  	float: right;
  	margin:0;
  	padding-bottom: 20px;
  }
- .post-type-archive-equipe .intro {
+ .post-type-archive-curadores .intro {
  	padding-left: 0;
  }
- .post-type-archive-equipe .entry-title {
+ .post-type-archive-curadores .entry-title {
  	color: #B843A6;
 	font-size: 36px;
 	font-weight: bold;
