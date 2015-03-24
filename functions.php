@@ -324,7 +324,7 @@ $plugins = new Brasa_Active_Plugins(
 );
 /*css personalizado */
 function custom_css() {
-    if(!get_option('home_cfg'))
+    if(!get_option('geral_cfg'))
     	return;
     $option = get_option('geral_cfg');
     $css = '<style>';
