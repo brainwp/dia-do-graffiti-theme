@@ -308,17 +308,17 @@ require get_template_directory() . '/inc/class-active-plugins.php';
 global $plugins;
 $plugins = new Brasa_Active_Plugins(
 	array(
-		'plugin1/plugin1.php' => array(
-				'name' => 'Plugin Legal Nexiste',
-				'url'  => '#nexiste1'
+		'brasa-slider/brasa-slider.php' => array(
+				'name' => 'Brasa Slider',
+				'url'  => 'https://github.com/brasadesign/brasa-slider'
 		),
-		'plugin2/plugin2.php' => array(
-			'name' => 'Plugin Legal Nexiste2',
-			'url'  => '#nexiste1'
+		'tagregator/bootstrap.php' => array(
+			'name' => 'Tagregator',
+			'url'  => 'https://wordpress.org/plugins/tagregator'
 		),
-		'plugin3/plugin2.php' => array(
-			'name' => 'Plugin Legal Nexiste2',
-			'url'  => '#nexiste3'
+		'alo-easymail/alo-easymail.php' => array(
+			'name' => 'ALO EasyMail Newsletter',
+			'url'  => 'http://wordpress.org/plugins/alo-easymail'
 		),
 	)
 );

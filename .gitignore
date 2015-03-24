@@ -35,3 +35,7 @@ odin.zip
 
 sftp-config.json
 *.zip
+wp-config.php
+wp-config*
+wp-config-*.php
+wp-config-*
