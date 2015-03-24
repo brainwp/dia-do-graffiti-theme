@@ -138,14 +138,14 @@ $odin_theme_options->set_fields(
 					//'default' => 'Assine nosso Newsletter',
 				),
 				array(
-					'id' => 'hastag_url',
+					'id' => 'hashtag_url',
 					'label' => __('URL da página de visualização da hashtag','odin'),
 					'type' => 'text',
 					//'default' => 'Assine nosso Newsletter',
 				),
 			)
 		),
-		'geral_section_equioe' => array(
+		'geral_section_equipe' => array(
 			'tab'   => 'geral_cfg', // Sessão da aba odin_general
 			'title' => __('Configurações da página equipe','odin'),
 			'fields' => array(
