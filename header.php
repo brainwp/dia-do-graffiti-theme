@@ -26,11 +26,11 @@ $options = get_option('geral_cfg');
 	<nav id="menu-top" class="col-md-12 barra-bg internal-menu">
 		<div class="container">
 			<div class="row">
-				<div class="pull-left">
+				<div class="pull-left logo">
 					<a href="<?php echo home_url(); ?>">
 						<?php echo wp_get_attachment_image( $options['logo'],'full' );?>
 					</a>
-				</div><!-- .pull-left -->
+				</div><!-- .pull-left .logo -->
 				<?php if ( has_nav_menu( 'main-menu' ) ) : ?>
 					<?php
 						wp_nav_menu(

@@ -20,7 +20,8 @@ nav#menu-top{
 	padding-top:10px;
 	padding-bottom:10px;
 	position: fixed;
-	z-index: 999;
+	z-index: 99;
+	width: 100%;
 }
 nav#menu-top li a{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -38,8 +39,51 @@ nav .default-menu li {
 	margin-left: 20px;
 	list-style: none;
 }
+nav.internal-menu {
+	height: 90px;
+}
 nav.internal-menu .navbar-nav {
 	margin-top: 10px;
+}
+@media (max-width: 360px){
+	.internal-menu .logo {
+		float: none !important;
+		text-align: center;
+	}
+}
+@media (max-width: 480px){
+	#page-single .barra-title {
+		text-align: center;
+	}
+}
+.slicknav_menu { display: none; }
+@media (max-width: 768px) {
+	.navbar-nav {
+		display: none;
+	}
+	.slicknav_btn {
+		margin: 10px;
+	}
+	.slicknav_menu {
+		background-color: transparent;
+		display: block;
+		padding: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 999999;
+		width: 100%;
+	}
+	.slicknav_nav {
+		background-color: #1F1F1F;
+	}
+	nav#menu-top {
+		margin-top: 0;
+		position: relative;
+	}
+	#page-single {
+		padding-top: 0;
+	}
 }
 /* Slider home */
 .logo img {
@@ -425,7 +469,7 @@ nav.internal-menu .navbar-nav {
 	font-weight: 300;
 }
 #page-single .barra-title .row{
-	padding-top:10px;
+	padding-top:0;
 	padding-bottom:10px;
 }
 #page-single>div.container>div.row{
@@ -679,4 +723,10 @@ body.contato .wpcf7 textarea {
 	background-color: #2B2B2B;
 	color: #FFF;
 	padding: 8px 14px;
+}
+
+@media (max-width: 768px) {
+	#page-single {
+		padding-top: 0;
+	}
 }
