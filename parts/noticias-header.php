@@ -5,7 +5,7 @@
 <?php endif;?>
 <?php if(is_category()):?>
 	<h3 class="col-md-4 section-title pull-left">
-		<?php single_cat_title(__('Categoria&nbsp;','odin')); ?>
+		<?php single_cat_title(''); ?>
 	</h3>
 <?php endif;?>
 <div class="col-md-8 pull-right categories">
@@ -17,7 +17,7 @@
 	<?php endforeach; ?>
 	<?php if(!is_home()):?>
 		<a href="<?php echo esc_url(odin_get_post_archive());?>">
-			<?php _e('Ver todos','odin');?>
+			<?php _e('View all','odin');?>
 		</a>
 	<?php endif;?>
 </div><!-- .col-md-8 pull-right categories -->

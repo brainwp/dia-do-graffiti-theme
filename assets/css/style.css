@@ -13,6 +13,7 @@ a:hover {
 	height:1px;
 	clear:both;
 }
+section, div { word-wrap: break-word; }
 
 /* Menu Nav */
 nav#menu-top{
@@ -45,6 +46,9 @@ nav.internal-menu {
 nav.internal-menu .navbar-nav {
 	margin-top: 10px;
 }
+.navbar-nav .home-item {
+	display: none;
+}
 @media (max-width: 360px){
 	.internal-menu .logo {
 		float: none !important;
@@ -62,8 +66,12 @@ nav.internal-menu .navbar-nav {
 	nav#menu-top {
 		display: none;
 	}
+	.navbar-nav .home-item {
+		display: block;
+	}
 	.slicknav_btn {
-		margin: 10px;
+		margin: 26px 10px 17px;
+		padding: 12px;
 	}
 	.slicknav_menu {
 		background-color: transparent;
@@ -243,6 +251,7 @@ nav.internal-menu .navbar-nav {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 	font-size:2.6em;
+	word-wrap: break-word;
 }
 #noticias-home .categories{
 	padding-bottom:2%;
@@ -353,6 +362,9 @@ nav.internal-menu .navbar-nav {
 #barra-newsletter h3.section-title{
 	font-weight: 300;
 }
+#barra-newsletter .widgettitle {
+	display: none;
+}
 #barra-newsletter input{
 	border-radius: 20px;
 	background:#2b2b2b;
@@ -441,6 +453,9 @@ nav.internal-menu .navbar-nav {
 	padding-top:20px;
 	padding-bottom:120px;
 }
+#footer-creditos .logos {
+	text-align: right;
+}
 #footer-creditos *{
 	font-family: 'Source Sans Pro', sans-serif;
 }
@@ -459,6 +474,7 @@ nav.internal-menu .navbar-nav {
 	width:100%;
 	background:url('../images/bg-noticias.jpg') fixed no-repeat;
 	background-size:cover;
+	word-wrap: break-word;
 }
 #page-single .barra-title h1{
 	color:white;
@@ -787,6 +803,12 @@ body.contato .wpcf7 textarea {
 	#slider-home .container {
 	    padding-bottom: 0;
 	}
+	body.contato .row > p {
+		width: 100%;
+	}
+	body.contato .wpcf7 {
+		width: 95%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -822,5 +844,10 @@ body.contato .wpcf7 textarea {
 	.agenda-content .local {
 		text-align: center;
 		width: 100%;
+	}
+}
+@media (max-width: 980px) {
+	#noticias-home {
+		margin-top: 0;
 	}
 }
