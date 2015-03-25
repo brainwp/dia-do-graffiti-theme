@@ -220,6 +220,7 @@ nav.internal-menu .navbar-nav {
 	margin-top:20px;
 }
 #infos-home .agenda .agenda-content .separator{
+	clear: both;
 	height:1px;
 	background:white;
 }
@@ -745,6 +746,7 @@ body.contato .wpcf7 textarea {
 	}
 	#infos-home .agenda header, #infos-home .col-md-4, #infos-home .agenda-content{
 		clear: both;
+		overflow: hidden;
 		width: 100%;
 	}
 }
@@ -784,5 +786,22 @@ body.contato .wpcf7 textarea {
 	div.row {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	#infos-home .agenda header {
+		background: #444;
+		min-height: auto;
+		padding: 25px 0;
+		position: relative;
+	}
+	#infos-home .agenda .agenda-content {
+		margin-left: 0;
+		margin-top: 0;
+		padding-top: 0;
+		width: 100%;
+	}
+	.agenda-content .date,
+	.agenda-content .local {
+		text-align: center;
+		width: 100%;
 	}
 }
