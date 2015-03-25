@@ -352,3 +352,14 @@ function add_body_class( $classes = "" ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_body_class' );
+
+add_action( 'pre_get_posts', 'change_query_curadores' );
+
+function change_query_curadores( $query ) {
+	
+	if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'curadores' ) ) {
+		$query->set( 'posts_per_page', '-1' );
+		$query->set( 'orderby', 'rand' );
+	}
+
+}
