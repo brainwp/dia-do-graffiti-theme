@@ -435,6 +435,7 @@ nav.internal-menu .navbar-nav {
 	bottom: 0;
 	position: fixed;
 	z-index: -14;
+	width: 100%;
 }
 #footer-creditos{
 	padding-top:20px;
@@ -761,6 +762,24 @@ body.contato .wpcf7 textarea {
 	}
 	.slick-dots {
 		display: none;
+	}
+	.margin-footer {
+		margin-bottom: 165px;
+		text-align: center;
+	}
+	#footer-creditos {
+		padding-bottom: 35px;
+	}
+	#footer-creditos .logos {
+		float: none !important;
+		margin: 0 auto;
+		overflow: hidden;
+		padding-top: 20px;
+		text-align: center;
+		width: 100%;
+	}
+	#footer-creditos .logos .pull-right {
+		float: none !important;
 	}
 }
 
