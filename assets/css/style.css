@@ -809,6 +809,16 @@ body.contato .wpcf7 textarea {
 	body.contato .wpcf7 {
 		width: 95%;
 	}
+	#barra-newsletter form {
+		margin: 10px auto;
+	}
+	#page-single .barra-title h1 {
+	    max-width: 90%;
+	}
+	#page-single #secondary {
+		float: none !important;
+		margin: 0 auto;
+	}
 }
 
 @media (max-width: 768px) {
