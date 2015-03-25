@@ -58,7 +58,8 @@ nav.internal-menu .navbar-nav {
 }
 .slicknav_menu { display: none; }
 @media (max-width: 768px) {
-	.navbar-nav {
+	.navbar-nav,
+	nav#menu-top {
 		display: none;
 	}
 	.slicknav_btn {
@@ -77,6 +78,9 @@ nav.internal-menu .navbar-nav {
 	.slicknav_nav {
 		background-color: #1F1F1F;
 	}
+	.slicknav_nav a {
+		padding: 10px;
+	}
 	nav#menu-top {
 		margin-top: 0;
 		position: relative;
@@ -86,6 +90,9 @@ nav.internal-menu .navbar-nav {
 	}
 }
 /* Slider home */
+.wrap-logo {
+	text-align: center;
+}
 .logo img {
 	height: auto;
 	max-width: 300px;
@@ -100,15 +107,9 @@ nav.internal-menu .navbar-nav {
 .slick-slider {
     margin-bottom: 20px !important;
 }
-@media screen and (max-width: 800px) {
-	#slider-home .pull-right{
-		width:100%;
-		clear:both;
-	}
-}
 .bg-slider {
 	background-color: #333;
-	background-size: 100% auto;
+	/*background-size: 100% auto;*/
 	height: 400px;
 	background-position: center 70px;
 	background-attachment: fixed;
@@ -228,12 +229,6 @@ nav.internal-menu .navbar-nav {
 #infos-home .no-event {
 	display: block;
 	padding: 15px 0 15px 15px;
-}
-@media screen and (max-width: 800px) {
-	#infos-home .agenda header, #infos-home .col-md-4, #infos-home .agenda-content{
-		width:100%;
-		clear:both;
-	}
 }
 /* Noticias Query */
 #noticias-home{
@@ -725,8 +720,69 @@ body.contato .wpcf7 textarea {
 	padding: 8px 14px;
 }
 
+@media (max-width: 980px) {
+	#slider-home {
+	    margin-top: 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.bg-slider {
+	    height: 470px;
+	}
+	#slider-home .pull-left {
+		margin-bottom: 3px;
+	    margin-top: 50px;
+	}
+	.logo img {
+	    max-width: 180px;
+	}
+	#slider-home .pull-right{
+		clear: both;
+		float: none !important;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#infos-home .agenda header, #infos-home .col-md-4, #infos-home .agenda-content{
+		clear: both;
+		width: 100%;
+	}
+}
+
+@media (max-width: 360px) {
+	#slider-home .pull-right {
+		margin-top: 10px;
+	    width: 100%;
+	}
+	#slider-home .pull-right div.slick_slide {
+	    height: auto;
+	}
+	.slick-dots {
+		display: none;
+	}
+}
+
+@media (max-width: 590px) {
+	#slider-home .container {
+	    padding-bottom: 0;
+	}
+}
+
 @media (max-width: 768px) {
+	.bg-slider {
+	    height: 396px;
+	    background-position: center 0px;
+	}
+	#slider-home .pull-left {
+	    float: none !important;
+		margin: -15px auto 0;
+		width: 90%;
+	}
 	#page-single {
 		padding-top: 0;
+	}
+	div.row {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
