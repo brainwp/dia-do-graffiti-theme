@@ -15,6 +15,6 @@
 			<h3 class="css-cor"><?php the_title();?></h3>
 			<?php the_excerpt();?>
 		</div><!-- .col-md-12 text -->
-		<a href="" class="permalink bg-cor">+</a>
+		<a href="<?php the_permalink(); ?>" class="permalink bg-cor">+</a>
 	</div>
 </a><!-- .col-md-4 content-noticias -->

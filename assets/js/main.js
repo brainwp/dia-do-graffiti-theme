@@ -6,4 +6,12 @@ jQuery(document).ready(function($) {
 	/**
 	 * Odin Core shortcodes
 	 */
+
+	$(function(){
+		$('.navbar-nav').slicknav({
+			label: '',
+			duration: 500,
+			closeOnClick: true
+		});
+	});
 });

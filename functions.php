@@ -17,7 +17,7 @@
  * Sets content width.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 400;
+	$content_width = 800;
 }
 /**
  * Odin Classes.
@@ -212,14 +212,16 @@ add_action( 'after_switch_theme', 'odin_flush_rewrite' );
 function odin_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
-	// Loads Odin main stylesheet.
+	// Loads Odin Stylesheets.
 	wp_enqueue_style( 'source-sans-pro-odin', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic', array(), null, 'all' );
+	wp_enqueue_style( 'slicknav-style', $template_url . '/assets/css/slicknav.css', array(), null, 'all' );
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
-
+	
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
 	// General scripts.
+	wp_enqueue_script( 'slicknav', $template_url . '/assets/js/libs/jquery.slicknav.min.js', array(), null, true );
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
@@ -350,3 +352,14 @@ function add_body_class( $classes = "" ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_body_class' );
+
+add_action( 'pre_get_posts', 'change_query_curadores' );
+
+function change_query_curadores( $query ) {
+	
+	if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'curadores' ) ) {
+		$query->set( 'posts_per_page', '-1' );
+		$query->set( 'orderby', 'rand' );
+	}
+
+}

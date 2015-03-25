@@ -24,9 +24,9 @@ $options = get_option('home_cfg');
 
 <body <?php body_class(); ?>>
 
-	<?php $style = wp_get_attachment_image_src($options['slider_bg'],'large');?>
+	<?php $style = wp_get_attachment_image_src( $options['slider_bg'],'full' );?>
 	<?php $style = 'background-image:url('.$style[0].');'?>
-	<div class="bg-slider" style="<?php echo esc_attr($style);?>">
+	<div class="bg-slider" style="<?php echo esc_attr( $style );?>">
 
 	<nav id="menu-top" class="col-md-12 barra-bg">
 		<div class="container">
@@ -60,12 +60,12 @@ $options = get_option('home_cfg');
 	<section id="slider-home" class="col-md-12">
 		<div class="container" style="">
 			<div class="row">
-				<div class="col-md-4 pull-left">
+				<div class="col-md-4 col-sm-12 pull-left wrap-logo">
 					<div class="col-md-10 col-md-offset-2 logo">
 						<?php echo wp_get_attachment_image($options['logo'],'full');?>
 					</div><!-- .col-md-10 col-md-offset-2 logo -->
-				</div><!-- .col-md-4 pull-left -->
-				<div class="col-md-7 pull-right">
+				</div><!-- .col-sm-4 pull-left -->
+				<div class="col-md-8 col-sm-12 pull-right slider">
 					<?php echo apply_filters( 'the_content', $options[ 'short_slider' ] ); ?> 
 				</div><!-- .col-md-8 pull-right -->
 			</div><!-- .row -->
