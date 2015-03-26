@@ -307,6 +307,7 @@ nav.internal-menu .navbar-nav {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 	height:220px;
+	overflow: hidden;
 	position: relative;
 }
 #noticias-home .content-noticias .fade-item {

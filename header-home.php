@@ -61,9 +61,9 @@ $options = get_option('home_cfg');
 		<div class="container" style="">
 			<div class="row">
 				<div class="col-md-4 col-sm-12 pull-left wrap-logo">
-					<div class="col-md-10 col-md-offset-2 logo">
+					<div class="col-md-10 logo">
 						<?php echo wp_get_attachment_image($options['logo'],'full');?>
-					</div><!-- .col-md-10 col-md-offset-2 logo -->
+					</div><!-- .col-md-10 logo -->
 				</div><!-- .col-sm-4 pull-left -->
 				<div class="col-md-8 col-sm-12 pull-right slider">
 					<?php echo apply_filters( 'the_content', $options[ 'short_slider' ] ); ?> 
