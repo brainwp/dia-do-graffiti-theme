@@ -17,7 +17,7 @@
  * Sets content width.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 800;
+	$content_width = 1200;
 }
 /**
  * Odin Classes.
