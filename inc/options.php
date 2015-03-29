@@ -132,12 +132,6 @@ $odin_theme_options->set_fields(
 			'title' => __('Configurações de redes sociais','odin'),
 			'fields' => array(
 				array(
-					'id' => 'hashtag',
-					'label' => __('Hashtag oficial do evento','odin'),
-					'type' => 'text',
-					//'default' => 'Assine nosso Newsletter',
-				),
-				array(
 					'id' => 'hashtag_url',
 					'label' => __('URL da página de visualização da hashtag','odin'),
 					'type' => 'text',

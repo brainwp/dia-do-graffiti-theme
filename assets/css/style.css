@@ -406,12 +406,12 @@ nav.internal-menu .navbar-nav {
 #barra-newsletter .widget {
 	margin-bottom: 0;
 }
-/*Hashtag do evento na home */
+/* Hashtag na Home */
 #hashtag{
-	background-color: #FFF;
-	height:450px;
+	background: url('../images/bg-hashtag.jpg') center top no-repeat #FFF;
+	height: 190px;
 	overflow: hidden;
-	padding:0;
+	padding: 0;
 }
 .home #hashtag #tggr-loading-new-posts{
 	display:none !important;
