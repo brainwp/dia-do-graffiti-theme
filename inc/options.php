@@ -107,6 +107,12 @@ $odin_theme_options->set_fields(
 					'type' => 'color',
 					'default' => '#1f1f1f',
 				),
+				array(
+					'id' => 'code_analytics',
+					'label' => __('Tracking Code Google Analytics','odin'),
+					'type' => 'text',
+					'default' => '',
+				),
 			)
 		),
 		'geral_section_newsletter' => array(
