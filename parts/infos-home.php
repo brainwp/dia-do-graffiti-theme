@@ -26,24 +26,32 @@ $options = get_option('home_cfg');
 					<a class="link-agenda pull-right bg-cor"><?php _e('Todas','odin');?></a>
 				</header>
 				<div class="agenda-content col-md-12">
-					
+
 					<?php
 						// WP_Query argument
+					    $current = current_time('Ymd');
 						$args = array (
 							'post_type'              => 'agenda',
 							'posts_per_page'         => '3',
 							'orderby'                => 'meta_value',
 							'meta_key'               => 'data_inicio',
-							'order'                  => 'DESC'
+							'order'                  => 'DESC',
+							'meta_query' => array(
+								array(
+								'key' => 'data_inicio',
+								'compare' => '>=',
+								'value' => $current
+								),
+							),
 						);
 						// The Query
 						$query = new WP_Query( $args );
 						if ( $query->have_posts() ) :
-						
+
 							while ( $query->have_posts() ): $query->the_post();
 						       get_template_part( 'content','agenda' );
 						    endwhile;
-						
+
 						else :
 							echo '<span class="no-event">';
 							_e( 'No registered event', 'odin' );
