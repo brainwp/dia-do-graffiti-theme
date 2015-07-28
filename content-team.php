@@ -10,13 +10,13 @@ if ( has_post_thumbnail($post->ID) ) {
 }
 ?>
 	<article class="col-sm-12 profile">
-		<div class="profile-header">
+		<div class="col-md-4 profile-header">
 			<?php if ( $thumb_src ): ?>
 			<img src="<?php echo $thumb_src; ?>" alt="<?php the_title(); ?>" class="img-circle">
 			<?php endif; ?>
 		</div>
 
-		<div class="profile-content">
+		<div class="col-md-8 profile-content">
 			<h3><?php the_title(); ?></h3>
 			<p class="lead position"><?php the_field('team_position'); ?></p>
 			<?php the_content(); ?>
