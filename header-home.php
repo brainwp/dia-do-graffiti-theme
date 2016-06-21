@@ -65,11 +65,6 @@ $options = get_option('home_cfg');
 						<?php endif;?>
 					</div><!-- .col-md-10 logo -->
 				</div><!-- .col-sm-4 pull-left -->
-				<div class="col-md-8 col-sm-12 pull-right slider">
-					<?php if( $code = kirki_get_option( 'slider_home' ) ) : ?>
-						<?php echo apply_filters( 'the_content', $code ); ?>
-					<?php endif;?>
-				</div><!-- .col-md-8 pull-right -->
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- #slider-home.col-md-12 -->
