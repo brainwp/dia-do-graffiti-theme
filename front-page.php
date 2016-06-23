@@ -1,16 +1,11 @@
 <?php
 /* Template name: Home */
 get_header( 'home' );
-?>
 
+get_template_part('/parts/infos-home');
+get_template_part('/parts/slider-home');
+get_template_part('/parts/curadores-home');
+get_template_part('/parts/links-home');
+get_template_part('/parts/map-home');
 
-<?php get_template_part('/parts/infos-home'); ?>
-<?php get_template_part('/parts/slider-home'); ?>
-<?php get_template_part('/parts/curadores-home'); ?>
-<?php get_template_part('/parts/links-home'); ?>
-<?php get_template_part('/parts/map-home'); ?>
-<?php get_template_part('/parts/barra-newsletter'); ?>
-<div class="margin-footer"></div>
-<?php
 get_footer();
-?>
