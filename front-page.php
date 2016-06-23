@@ -7,7 +7,8 @@ get_header( 'home' );
 <?php get_template_part('/parts/infos-home'); ?>
 <?php get_template_part('/parts/slider-home'); ?>
 <?php get_template_part('/parts/curadores-home'); ?>
-<?php get_template_part('/parts/noticias-home'); ?>
+<?php get_template_part('/parts/links-home'); ?>
+<?php get_template_part('/parts/map-home'); ?>
 <?php get_template_part('/parts/barra-newsletter'); ?>
 <div class="margin-footer"></div>
 <?php
