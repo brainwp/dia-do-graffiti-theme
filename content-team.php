@@ -6,9 +6,22 @@ global $post;
 $thumb_src = null;
 if ( has_post_thumbnail( $post->ID ) ) {
 	$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+	$thumb_odin = odin_thumbnail( 250, 250, get_the_title(), true, 'img-circle', true );
 	$thumb_src = $src[0];
 }
-?>
+
+if ( is_home()  || is_front_page() ) : ?>
+
+	<figure class="col-md-4 profile-header">
+		<?php if ( $thumb_odin ): ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php echo $thumb_odin; ?>
+			</a>
+		<?php endif; ?>
+	</figure>
+
+<?php else : ?>
+
 	<article class="col-sm-12 profile">
 		<div class="col-md-4 profile-header">
 			<?php if ( $thumb_src ): ?>
@@ -27,3 +40,6 @@ if ( has_post_thumbnail( $post->ID ) ) {
 			<?php endif; ?>
 		</div>
 	</article>
+
+<?php endif; ?>
+	

@@ -233,6 +233,31 @@ nav.internal-menu .navbar-nav {
 	display: block;
 	padding: 15px 0 15px 15px;
 }
+/* Home */
+/* Curadores e Links */
+.curadores-links-home {
+	background-color: #666;
+	clear: both;
+	overflow: hidden;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+.curadores-links-home .profile-header {
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+.curadores-links-home .profile-header img.img-circle {
+	border-radius: 230px;
+	display: inline-block;
+	height: auto;
+	max-height: 200px;
+	max-width: 200px;
+	transition: all 300ms ease-in-out;
+}
+.curadores-links-home .profile-header:hover img.img-circle {
+	opacity: 0.8;
+}
 /* Noticias Query */
 #noticias-home{
 	margin-top: 90px;
