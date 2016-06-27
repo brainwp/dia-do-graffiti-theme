@@ -235,6 +235,10 @@ nav.internal-menu .navbar-nav {
 }
 /* Home */
 /* Curadores e Links */
+#curadores-home {
+	overflow: hidden;
+	text-align: center;
+}
 .curadores-links-home {
 	background-color: #666;
 	clear: both;
@@ -243,8 +247,9 @@ nav.internal-menu .navbar-nav {
 	padding-top: 50px;
 }
 .curadores-links-home .profile-header {
-	float: left;
+	display: inline-block;
 	overflow: hidden;
+	padding: 15px;
 	text-align: center;
 }
 .curadores-links-home .profile-header img.img-circle {
@@ -252,7 +257,8 @@ nav.internal-menu .navbar-nav {
 	display: inline-block;
 	height: auto;
 	max-height: 200px;
-	max-width: 200px;
+	max-width: 100%;
+	width: 200px;
 	transition: all 300ms ease-in-out;
 }
 .curadores-links-home .profile-header:hover img.img-circle {

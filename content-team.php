@@ -12,34 +12,34 @@ if ( has_post_thumbnail( $post->ID ) ) {
 
 if ( is_home()  || is_front_page() ) : ?>
 
-	<figure class="col-md-4 profile-header">
+	<figure class="col-sm-4 profile-header">
 		<?php if ( $thumb_odin ): ?>
 			<a href="<?php the_permalink(); ?>">
 				<?php echo $thumb_odin; ?>
 			</a>
 		<?php endif; ?>
-	</figure>
+	</figure><!-- profile-header -->
 
 <?php else : ?>
 
 	<article class="col-sm-12 profile">
-		<div class="col-md-4 profile-header">
+		<div class="col-sm-4 profile-header">
 			<?php if ( $thumb_src ): ?>
 				<img src="<?php echo $thumb_src; ?>" alt="<?php the_title(); ?>" class="img-circle">
 			<?php endif; ?>
-		</div>
+		</div><!-- profile-header -->
 
-		<div class="col-md-8 profile-content">
+		<div class="col-sm-8 profile-content">
 			<h3><?php the_title(); ?></h3>
-			<p class="lead position"><?php the_field('team_position'); ?></p>
+			<p class="lead position"><?php the_field( 'team_position' ); ?></p>
 			<?php the_content(); ?>
 			<?php if ( $link = get_field('team_link') ): ?>
-			<a class="blog-link css-cor" href="<?php echo esc_url($link); ?>">
-				<?php echo esc_url($link);?>
-			</a>
+				<a class="blog-link css-cor" href="<?php echo esc_url( $link ); ?>">
+					<?php echo esc_url( $link );?>
+				</a><!-- profile-content -->
 			<?php endif; ?>
 		</div>
-	</article>
+	</article><!-- profile -->
 
 <?php endif; ?>
 	
