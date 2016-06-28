@@ -10,9 +10,9 @@ if ( has_post_thumbnail( $post->ID ) ) {
 	$thumb_src = $src[0];
 }
 
-if ( is_home()  || is_front_page() ) : ?>
+if ( is_home() || is_front_page() ) : ?>
 
-	<figure class="col-sm-4 profile-header">
+	<figure class="col-sm-3 profile-header">
 		<?php if ( $thumb_odin ): ?>
 			<a href="<?php the_permalink(); ?>">
 				<?php echo $thumb_odin; ?>
