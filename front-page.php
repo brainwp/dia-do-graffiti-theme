@@ -12,6 +12,8 @@ echo '<div class="curadores-links-home">';
 	echo '</div><!-- .container -->';
 echo '</div><!-- .curadores-links-home -->';
 
-get_template_part('/parts/map-home');
+dynamic_sidebar( 'homenageado-sidebar' );
+
+get_template_part('/parts/homenageado-home');
 
 get_footer();

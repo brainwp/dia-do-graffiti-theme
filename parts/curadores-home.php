@@ -1,7 +1,7 @@
 <?php
 /* Template name: Curadores home */
 ?>
-<section id="curadores-home" class="col-sm-8">
+<section id="curadores-home" class="col-sm-9">
 	<?php
 		/**
 		 * The WordPress Query class.

@@ -5,6 +5,8 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 	<section id="homenageado-home" class="col-sm-4">
 		<?php $page = get_post( $hid ); ?>
 
+		<?php var_dump( $page ); ?>
+
 		<!-- Continua... -->
 
 	</section><!-- #homenageado-home -->
