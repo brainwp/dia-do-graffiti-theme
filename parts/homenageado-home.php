@@ -1,5 +1,5 @@
 <?php
-/* Template name: Homenageado Home */
+/* Template: Homenageado Home */
 
 if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 	<section id="homenageado-home" class="col-sm-4">

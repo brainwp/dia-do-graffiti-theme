@@ -295,7 +295,14 @@ function brasa_kirki_fields( $fields ) {
 		'default'  => get_bloginfo( 'name' ),
 		'priority' => 1,
 	);
-
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'homenageado_id',
+		'label'    => __( 'ID of the page Honored', 'odin' ),
+		'section'  => 'home_site_info',
+		'default'  => '',
+		'priority' => 1,
+	);
 	$fields[] = array(
 		'type'     => 'text',
 		'setting'  => 'fast_link_1_title',
@@ -344,3 +351,36 @@ function brasa_kirki_fields( $fields ) {
 	return $fields;
 }
 add_filter( 'kirki/fields', 'brasa_kirki_fields' );
+
+
+/* Metabox Odin */
+function homenageado_fields() {
+
+	global $post;
+	$post_id = $_GET[ 'post' ] ? $_GET[ 'post' ] : $_POST[ 'post_ID' ];
+	$template = get_post_meta($post_id, '_wp_page_template', true);
+
+	if( $template == 'page-homenageado.php' ) {
+
+	    $homenageado_metabox = new Odin_Metabox(
+	        'galeria_fotos', // Slug/ID of the Metabox (Required)
+	        'Galeria', // Metabox name (Required)
+	        'page', // Slug of Post Type (Optional)
+	        'normal', // Context (options: normal, advanced, or side) (Optional)
+	        'high' // Priority (options: high, core, default or low) (Optional)
+	    );
+
+	    $homenageado_metabox->set_fields(
+	        array(
+	            // Image Plupload field.
+	            array(
+	                'id'          => 'galeria_fotos_plupload', // Required
+	                'label'       => __( 'Galeria de Fotos', 'odin' ), // Required
+	                'type'        => 'image_plupload', // Required
+	            ),
+	        )
+	    );
+	}
+}
+
+add_action( 'init', 'homenageado_fields', 1 );
