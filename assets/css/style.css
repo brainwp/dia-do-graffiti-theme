@@ -313,6 +313,37 @@ nav.internal-menu .navbar-nav {
 .modal-curadores a.link:hover {
 	opacity: 0.8;
 }
+/* Homenageado */
+#homenageado-home .thumb {
+	overflow: hidden;
+	padding-bottom: 20px;
+	position: relative;
+}
+#homenageado-home .thumb a {
+	border-radius: 50px;
+	bottom: 0;
+	display: block;
+	height: 50px;
+	left: 3%;
+	overflow: hidden;
+	position: absolute;
+	width: 50px;
+}
+#homenageado-home .thumb a .bg {
+	background: url( '../images/icon-plus.png' ) center center no-repeat transparent;
+	background-size: 80%;
+	border-radius: 50px;
+	display: block;
+	height: 50px;
+	position: absolute;
+	transition: all 200ms ease-in-out;
+	width: 50px;
+}
+#homenageado-home .thumb a:hover .bg {
+    -ms-transform: rotate( 90deg ); /* IE 9 */
+    -webkit-transform: rotate( 90deg ); /* Safari */
+    transform: rotate( 90deg );
+}
 /* Noticias Query */
 #noticias-home{
 	margin-top: 90px;
