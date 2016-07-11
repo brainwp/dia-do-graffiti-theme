@@ -1,12 +1,13 @@
 <?php
-/* Template name: Slider home */
+/* Template: Slider home */
 ?>
-<section id="slider-home" class="col-md-12">
-	
-	<div class="slider">
-		<?php if ( $code = kirki_get_option( 'slider_home' ) ) : ?>
-			<?php echo apply_filters( 'the_content', $code ); ?>
-		<?php endif; ?>
-	</div><!-- .slider -->
+<?php if ( $code = get_theme_mod( 'slider_home', true ) ) : ?>
 
-</section><!-- #slider-home -->
+	<section id="slider-home" class="col-sm-12 nopadding">
+		<div class="slider">
+			<?php echo apply_filters( 'the_content', '[brasa_slider name="Home"]' ); ?>
+		</div><!-- .slider -->
+	</section><!-- #slider-home -->
+
+<?php endif; ?>
+	

@@ -376,3 +376,33 @@ function google_analytics_tracking_code() {
 }
 
 add_action('wp_head', 'google_analytics_tracking_code');
+
+
+/**
+ * @author Trevor Scott <trevor@trevor.net>
+ * @version 1.0 2010-12-07
+ *
+ * Grab the subdomain portion of the URL. If there is no sub-domain, the root
+ * domain is passed back. By default, this function *returns* the value as a
+ * string. Calling the function with echo = true prints the response directly to
+ * the screen.
+ *
+ * @param bool $echo
+ */
+function arrested_subdomain($echo = false) {
+	$hostAddress = explode ( '.', $_SERVER ["HTTP_HOST"] );
+	if (is_array ( $hostAddress )) {
+		if (eregi ( "^www$", $hostAddress [0] )) {
+			$passBack = 1;
+		} else {
+			$passBack = 0;
+		}
+		if ($echo == false) {
+			return ($hostAddress [$passBack]);
+		} else {
+			echo ($hostAddress [$passBack]);
+		}
+	} else {
+		return (false);
+	}
+}

@@ -348,6 +348,22 @@ function brasa_kirki_fields( $fields ) {
 		'section'  => 'home_links',
 		'priority' => 1,
 	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'featured_btn_txt',
+		'label'    => __( 'Texto do botão em destaque no menu', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'featured_btn_link',
+		'label'    => __( 'Link do botão em destaque no menu', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
 	return $fields;
 }
 add_filter( 'kirki/fields', 'brasa_kirki_fields' );

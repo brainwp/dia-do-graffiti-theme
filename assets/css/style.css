@@ -14,6 +14,19 @@ a:hover {
 	clear:both;
 }
 section, div { word-wrap: break-word; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 300;
+}
+body.logged-in {
+	margin-top: 32px;
+}
+.nopadding {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.container-fluid {
+	max-width: 1170px;
+}
 /* Hack Fancybox */
 #fancybox-wrap {
 	width: auto !important;
@@ -29,6 +42,68 @@ section, div { word-wrap: break-word; }
 #fancybox-bg-se,
 #fancybox-bg-ne {
 	background: none !important;
+}
+/* Midias */
+figure.wp-caption {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+/* Header */
+#header {
+	width: 100%;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+}
+body.logged-in #header {
+	top: 32px;
+}
+#header .container-menu {
+    width: 100%;
+    background: url("../images/bg-header.png") no-repeat;
+    background-size: cover;
+    box-shadow: 0px 3px 6px 7px rgba(0,0,0,0.2);
+}
+#header #main-navigation {
+	float: left;
+	margin: 0 0 0 220px !important;
+    width: 60%;
+}
+#header .navbar-default {
+    border: transparent !important;
+    background: none !important;
+}
+#header .navbar-default .navbar-nav > li > a {
+	font-size: 1.2em;
+	padding-top: 22px;
+    padding-bottom: 22px;
+	transition: all 200ms ease-in-out;
+}
+#header .navbar-default .navbar-nav > .active > a,
+#header .navbar-default .navbar-nav > li > a:hover {
+	background: transparent;
+	color: #FFF;
+}
+#header .featured-btn {
+	color: #FFF;
+    float: right;
+    padding: 25px;
+    position: absolute;
+    height: 70px;
+    right: 20px;
+    transition: all 200ms ease-in-out;
+}
+#header .featured-btn:hover {
+    background: #ea7a06;
+    text-decoration: none;
+}
+#header .header-image {
+    position: absolute;
+    top: 15px;
+    z-index: 99;
+}
+#header .header-image img {
+	max-width: 220px;
 }
 /* Menu Nav */
 nav#menu-top{
@@ -116,10 +191,6 @@ nav.internal-menu .navbar-nav {
 .wrap-logo {
 	text-align: center;
 }
-.logo img {
-	height: auto;
-	max-width: 300px;
-}
 #slider-home .pull-right div.slick_slide{
 	height:260px;
 	overflow: hidden;
@@ -127,20 +198,14 @@ nav.internal-menu .navbar-nav {
 #slider-home .pull-right div.slick_slide img{
 	width:100%;
 }
-.slick-slider {
-    margin-bottom: 20px !important;
-}
-.bg-slider {
-	background-color: #333;
-	/*background-size: 100% auto;*/
-	height: 400px;
-	background-position: center 70px;
-	background-attachment: fixed;
-}
 #slider-home{
-	/*background:url('../images/bg-noticias.jpg') no-repeat;*/
 	background-size:cover;
-	margin-top: 35px;
+	overflow: hidden;
+}
+#slider-home .slick-slider {
+    margin-bottom: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
 }
 #slider-home .container{
 	padding-top:20px;
@@ -155,12 +220,13 @@ nav.internal-menu .navbar-nav {
 #infos-home{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background: url('../images/bg-article.jpg') center center;
+	background: url('../images/bg-article.jpg') center center fixed;
 	background-size: cover;
 	background-color: #FFF;
 }
 #infos-home .site-description {
-	margin-top: 0;
+	margin-bottom: 40px;
+	margin-top: 80px;
 	text-align: center;
 }
 #infos-home .site-description h1 {
@@ -329,13 +395,20 @@ nav.internal-menu .navbar-nav {
 	opacity: 0.8;
 }
 /* Homenageado */
+#homenageado-home {
+	background: url('../images/bg-article.jpg') center center fixed;
+	background-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+}
 #homenageado-home h2 {
 	display: block;
 	color: #333;
 	text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 3em;
+}
+#homenageado-home .left {
+	padding-top: 30px;
 }
 #homenageado-home .thumb {
 	overflow: hidden;
@@ -381,6 +454,21 @@ nav.internal-menu .navbar-nav {
 }
 #homenageado-home .galeria img:hover {
 	opacity: 0.8;
+}
+#homenageado-home .links {
+	padding-bottom: 15px;
+	text-align: center;
+}
+#homenageado-home .links a {
+	display: block;
+	padding: 10px 0 0;
+	transition: all 300ms ease-in-out;
+}
+#homenageado-home .col-sm-8 {
+	padding-bottom: 30px;
+}
+#homenageado-home .col-sm-8 h2 {
+	text-align: left;
 }
 /* Noticias Query */
 #noticias-home{
@@ -586,7 +674,7 @@ nav.internal-menu .navbar-nav {
 	background:url('../images/bg-footer.jpg') top center no-repeat;
 	background-size:cover;
 	bottom: 0;
-	position: fixed;
+	position: relative;
 	z-index: -14;
 	width: 100%;
 }
@@ -901,9 +989,6 @@ body.contato .wpcf7 textarea {
 	#slider-home .pull-left {
 		margin-bottom: 3px;
 	    margin-top: 50px;
-	}
-	.logo img {
-	    max-width: 180px;
 	}
 	#slider-home .pull-right{
 		clear: both;
