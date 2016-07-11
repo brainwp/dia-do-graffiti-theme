@@ -9,6 +9,17 @@
  * @since 2.2.0
  */
 ?>
+
+<?php if ( $hashtag = get_theme_mod( 'link_hashtag' ) ): ?>
+	<a href="<?php echo $hashtag; ?>">
+		<div class="hashtag bg-cor">
+			<?php if ( $title_hashtag = get_theme_mod( 'title_hashtag' ) ): ?>
+				<h2><?php echo $title_hashtag; ?></h2>
+			<?php endif; ?>
+		</div><!-- hashtag -->
+	</a>
+<?php endif; ?>
+
 <footer id="footer-creditos" class="col-md-12">
 	<div class="container">
 		<div class="row">

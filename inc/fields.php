@@ -364,6 +364,22 @@ function brasa_kirki_fields( $fields ) {
 		'default'  => '',
 		'priority' => 1,
 	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'title_hashtag',
+		'label'    => __( 'Título da Hashtag', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'link_hashtag',
+		'label'    => __( 'Link para a página da Hashtag', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '',
+		'priority' => 1,
+	);
 	return $fields;
 }
 add_filter( 'kirki/fields', 'brasa_kirki_fields' );
