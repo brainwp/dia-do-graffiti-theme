@@ -220,8 +220,12 @@ function odin_enqueue_scripts() {
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
-	// General scripts.
+	// Slicknav.
 	wp_enqueue_script( 'slicknav', $template_url . '/assets/js/libs/jquery.slicknav.min.js', array(), null, true );
+
+	// Fancybox.
+	wp_enqueue_script( 'fancybox', $template_url . '/assets/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js', array(), null, true );
+	wp_enqueue_style( 'fancybox-style', $template_url . '/assets/js/libs/fancybox/jquery.fancybox-1.3.4.css', array(), null, 'all' );
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );

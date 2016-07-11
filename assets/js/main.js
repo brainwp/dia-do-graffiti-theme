@@ -14,4 +14,9 @@ jQuery(document).ready(function($) {
 			closeOnClick: true
 		});
 	});
+
+	/**
+	 * Fancybox
+	 */
+	$( "a.fancybox" ).fancybox();
 });

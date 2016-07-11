@@ -9,26 +9,30 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 			<?php
 				if ( has_post_thumbnail( $hid ) ) {
 					echo '<div class="thumb">';
-					echo '<a class="bg-cor" href="#">';
+					echo '<a rel="gallery" class="fancybox bg-cor" href="' . wp_get_attachment_url( get_post_thumbnail_id( $hid ) ) . '">';
 					echo '<div class="bg">';
 					echo '</div><!-- bg -->';
 					echo '</a>';
-					echo get_the_post_thumbnail( $hid, 'full');
+					echo get_the_post_thumbnail( $hid, 'full', array() );
 					echo '</div><!-- thumb -->';
 				}
 
-				_e( 'Photo gallery', 'odin' );
-				
+				echo '<h2>' . __( 'Photo gallery', 'odin' ) . '</h2>';
+
+				echo '<div class="galeria">';
+
 				$fotos = get_field( 'galeria_fotos_plupload', $hid );
 				foreach ( explode( ',', $fotos ) as $foto_id ) {
 				    $img = wp_get_attachment_image_src( $foto_id, 'thumbnail' );
 				    $img_full = wp_get_attachment_image_src( $foto_id, 'full' );
-				    echo '<a class="" href="' . $img_full[0] . '">';
-				    echo '<img src="' . $img[0] . '" width="'. $img[1] .'" height="' . $img[2] . '">';
+				    echo '<a rel="gallery" class="fancybox" href="' . $img_full[0] . '">';
+				    echo '<img class="col-sm-4" src="' . $img[0] . '" width="'. $img[1] .'" height="' . $img[2] . '">';
 				    echo '</a>';
 				}
 
-				_e( 'External links', 'odin' );
+				echo '</div><!-- galeria -->';
+
+				echo '<h2>' . __( 'External links', 'odin' ) . '</h2>';
 
 				$links = get_field( 'links_externos', $hid );
 				foreach ( explode( '<br />', $links ) as $link ) {
