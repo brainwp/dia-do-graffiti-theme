@@ -12,15 +12,14 @@
 
 get_header(); ?>
 <?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
+	// Start the Loop.
+	while ( have_posts() ) : the_post();
 
-					// Include the page content template.
-					get_template_part( 'content', 'post' );
+		// Include the page content template.
+		get_template_part( 'content', 'post' );
 
-				endwhile;
-			?>
+	endwhile;
+?>
 
 <?php get_template_part('/parts/barra-newsletter'); ?>
-<div class="margin-footer"></div>
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 				<?php
 					if ( has_post_thumbnail( $hid ) ) {
 						echo '<div class="thumb">';
-						echo '<a rel="gallery" class="fancybox bg-cor" href="' . wp_get_attachment_url( get_post_thumbnail_id( $hid ) ) . '">';
+						echo '<a rel="gallery" class="fancybox more bg-cor" href="' . wp_get_attachment_url( get_post_thumbnail_id( $hid ) ) . '">';
 						echo '<div class="bg">';
 						echo '</div><!-- bg -->';
 						echo '</a>';

@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: 300;
 }
 body.logged-in {
-	margin-top: 32px;
+	/*margin-top: 32px;*/
 }
 .nopadding {
 	padding-left: 0 !important;
@@ -415,31 +415,6 @@ nav.internal-menu .navbar-nav {
 	padding-bottom: 20px;
 	position: relative;
 }
-#homenageado-home .thumb a {
-	border-radius: 50px;
-	bottom: 0;
-	display: block;
-	height: 50px;
-	left: 3%;
-	overflow: hidden;
-	position: absolute;
-	width: 50px;
-}
-#homenageado-home .thumb a .bg {
-	background: url( '../images/icon-plus.png' ) center center no-repeat transparent;
-	background-size: 80%;
-	border-radius: 50px;
-	display: block;
-	height: 50px;
-	position: absolute;
-	transition: all 200ms ease-in-out;
-	width: 50px;
-}
-#homenageado-home .thumb a:hover .bg {
-    -ms-transform: rotate( 90deg ); /* IE 9 */
-    -webkit-transform: rotate( 90deg ); /* Safari */
-    transform: rotate( 90deg );
-}
 #homenageado-home .galeria {
 	background: url('../images/bg-noticias.jpg') center center no-repeat #202020;
 	padding: 5px;
@@ -518,8 +493,8 @@ nav.internal-menu .navbar-nav {
 	overflow: hidden;
 	background:white;
 }
-#noticias-home .content-noticias h3{
-	margin:0 !important;
+#noticias-home .content-noticias h3 {
+	margin: 5px auto 10px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 }
@@ -548,6 +523,7 @@ nav.internal-menu .navbar-nav {
 	z-index: 1;
 }
 .wrap-each {
+	margin-bottom: 30px;
 	overflow: hidden;
 	position: relative;
 }
@@ -815,6 +791,39 @@ nav.internal-menu .navbar-nav {
 .reveal-modal .close-reveal-modal:hover {
 	color: red !important;
 	text-decoration: none;
+}
+/* Archive de Posts */
+.more {
+	border-radius: 50px;
+	bottom: 0;
+	display: block;
+	height: 50px;
+	left: 3%;
+	overflow: hidden;
+	position: absolute;
+	width: 50px;
+	z-index: 2;
+}
+.more .bg {
+	background: url( '../images/icon-plus.png' ) center center no-repeat transparent;
+	background-size: 70%;
+	border-radius: 50px;
+	display: block;
+	height: 50px;
+	position: absolute;
+	transition: all 200ms ease-in-out;
+	width: 50px;
+}
+.content-noticias .more {
+	bottom: auto;
+	left: auto;
+	right: 5%;
+	top: 170px;
+}
+.more:hover .bg {
+    -ms-transform: rotate( 90deg ); /* IE 9 */
+    -webkit-transform: rotate( 90deg ); /* Safari */
+    transform: rotate( 90deg );
 }
 /* archive curadoria */
  .post-type-archive-curadores #content {
