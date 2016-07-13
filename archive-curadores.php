@@ -35,6 +35,4 @@ $title = (!empty($options['equipe_title'])) ? $options['equipe_title'] : __('Equ
 	</div><!-- .container -->
 </article><!-- #post-## -->
 
-<?php get_template_part('/parts/barra-newsletter'); ?>
-<div class="margin-footer"></div>
 <?php get_footer(); ?>

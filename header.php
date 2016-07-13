@@ -7,7 +7,7 @@
  * @package Odin
  * @since 2.2.0
  */
-$options = get_option('geral_cfg');
+//$options = get_option('home_cfg');
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -25,15 +25,35 @@ $options = get_option('geral_cfg');
 </head>
 
 <body <?php body_class(); ?>>
-	<nav id="menu-top" class="col-md-12 barra-bg internal-menu">
-		<div class="container">
-			<div class="row">
-				<div class="pull-left logo">
-					<a href="<?php echo home_url(); ?>">
-						<?php echo wp_get_attachment_image( $options['logo'],'full' );?>
+
+	<header id="header" role="banner">
+		<div class="container-menu" id="header-size">
+			<div class="container">
+
+				<div class="header-image">
+					<?php
+					$header_image = get_header_image();
+					if ( ! empty( $header_image ) ) :
+					?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo esc_url( $header_image ); ?>" height="<?php esc_attr_e( $header_image->height ); ?>" width="<?php esc_attr_e( $header_image->width ); ?>" alt="<?php echo bloginfo( 'name' ); ?>" />
+						</a>
+					<?php endif; ?>
+				</div><!-- .header-image -->
+
+			<div id="main-navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand visible-xs-block" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
 					</a>
-				</div><!-- .pull-left .logo -->
-				<?php if ( has_nav_menu( 'main-menu' ) ) : ?>
+				</div>
+				<nav class="collapse navbar-collapse navbar-main-navigation" role="navigation">
 					<?php
 						wp_nav_menu(
 							array(
@@ -46,15 +66,13 @@ $options = get_option('geral_cfg');
 							)
 						);
 					?>
-				<?php else : ?>
-					<?php if ( is_user_logged_in() && current_user_can( 'administrator' ) ) : ?>
-						<a class="css-cor" href="<?php echo admin_url( 'nav-menus.php' ); ?>"><?php _e( 'Create your first menu', 'odin' ); ?></a>
-					<?php else : ?>
-						<ul class="default-menu">
-							<?php echo wp_list_pages( 'title_li=' ); ?>
-						</ul><!-- default-menu -->
-					<?php endif; ?>
-				<?php endif; ?>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</nav><!-- #menu-top.col-md-12 -->
+				</nav><!-- .navbar-collapse -->
+			</div><!-- #main-navigation-->
+			<?php if ( $value = get_theme_mod( 'featured_btn_link', false ) ) : ?>
+				<a href="<?php echo $value; ?>" class="featured-btn bg-cor">
+					<?php echo get_theme_mod( 'featured_btn_txt', '' ); ?>
+				</a>
+			<?php endif; ?>
+			</div><!-- .container-->
+		</div><!-- .container-menu -->
+	</header><!-- #header -->

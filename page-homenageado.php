@@ -26,6 +26,5 @@ get_header(); ?>
 	endwhile;
 ?>
 
-<div class="margin-footer"></div>
 <?php get_footer();
 

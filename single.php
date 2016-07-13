@@ -20,6 +20,4 @@ get_header(); ?>
 
 	endwhile;
 ?>
-
-<?php get_template_part('/parts/barra-newsletter'); ?>
 <?php get_footer(); ?>

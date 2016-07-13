@@ -32,5 +32,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<div class="margin-footer"></div>
 <?php get_footer(); ?>
