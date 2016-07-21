@@ -34,18 +34,8 @@
 				</div><!-- .col-md-12 -->
 			</div><!-- .col-md-4 -->
 			<div class="col-md-8 pull-right logos">
-
-				<div class="col-sm-12 pull-right">
-				
-					<a target="_blank" href="http://brasa.art.br">
-						<img alt="Brasa" src="<?php bloginfo('template_url');?>/assets/images/brasa.png">
-					</a>
-					<a target="_blank" href="http://www.acaoeducativa.org/">
-						<img alt="Ação Educativa" src="<?php bloginfo('template_url');?>/assets/images/acaoeducativa.png">
-					</a>
-
-				</div>
-
+				<a href="http://www.acaoeducativa.org.br/" class="ae" target="_blank"></a>
+				<a href="http://www.brasa.art.br" class="brasa" target="_blank"></a>
 			</div><!-- .col-md-8 pull-right -->
 		</div><!-- .row -->
 	</div><!-- .container -->
