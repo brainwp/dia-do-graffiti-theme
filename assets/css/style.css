@@ -342,16 +342,34 @@ nav.internal-menu .navbar-nav {
 	text-align: center;
 }
 .curadores-links-home .profile-header img.img-circle {
+	background-color: #FFF;
 	border-radius: 230px;
 	display: inline-block;
 	height: auto;
 	max-height: 200px;
 	max-width: 100%;
-	width: 200px;
 	transition: all 300ms ease-in-out;
 }
 .curadores-links-home .profile-header:hover img.img-circle {
 	opacity: 0.8;
+}
+@media screen and ( min-width: 992px ) {
+	.curadores-links-home .profile-header {
+		width: 20%;
+	}
+}
+@media screen and ( max-width: 768px ) {
+	.curadores-links-home .profile-header {
+		width: 32%;
+	}
+	.curadores-links-home .profile-header img.img-circle {
+		max-width: 100%;
+	}
+}
+@media screen and ( max-width: 480px ) {
+	.curadores-links-home .profile-header {
+		width: 48%;
+	}
 }
 .curadores-links-home #links-home a {
 	border-radius: 3px;
