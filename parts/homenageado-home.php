@@ -27,25 +27,29 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 					foreach ( explode( ',', $fotos ) as $foto_id ) {
 					    $img = wp_get_attachment_image_src( $foto_id, 'thumbnail' );
 					    $img_full = wp_get_attachment_image_src( $foto_id, 'full' );
-					    echo '<a rel="gallery" class="fancybox" href="' . $img_full[0] . '">';
-					    echo '<img class="col-sm-4" src="' . $img[0] . '" width="'. $img[1] .'" height="' . $img[2] . '">';
-					    echo '</a>';
+					    if ( !empty( $img ) ) {
+					    	echo '<a rel="gallery" class="fancybox" href="' . $img_full[0] . '">';
+						    echo '<img class="col-sm-4" src="' . $img[0] . '" width="'. $img[1] . '" height="' . $img[2] . '">';
+						    echo '</a>';
+					    }
 					}
 
 					echo '</div><!-- galeria -->';
 
-					echo '<h2>' . __( 'External links', 'odin' ) . '</h2>';
-
-					echo '<div class="links">';
-
 					$links = get_field( 'links_externos', $hid );
-					foreach ( explode( '<br />', $links ) as $link ) {
-						$link = trim( $link );
-						echo '<a class="external-link" href="' . $link . '" target="_blank">';
-						echo $link;
-						echo '</a>';
+
+					if ( !empty( $links ) ) {
+						echo '<h2>' . __( 'External links', 'odin' ) . '</h2>';
+						echo '<div class="links">';
+						foreach ( explode( '<br />', $links ) as $link ) {
+							$link = trim( $link );
+							echo '<a class="external-link" href="' . $link . '" target="_blank">';
+							echo $link;
+							echo '</a>';
+						}
+						echo '</div><!-- links -->';	
 					}
-					echo '</div><!-- links -->';
+					
 				?>
 				
 			</div><!-- left -->

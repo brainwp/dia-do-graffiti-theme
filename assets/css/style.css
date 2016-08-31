@@ -453,6 +453,7 @@ nav.internal-menu .navbar-nav {
 }
 #homenageado-home .galeria img:hover {
 	opacity: 0.8;
+	outline: none;
 }
 #homenageado-home .links {
 	padding-bottom: 15px;
