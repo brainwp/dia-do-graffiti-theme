@@ -192,6 +192,13 @@ nav.internal-menu .navbar-nav {
 	#page-single {
 		padding-top: 0;
 	}
+	#header .featured-btn {
+		right: 75px;
+	}
+	.navbar-header .navbar-toggle,
+	.navbar-default .navbar-brand {
+		display: none !important;
+	}
 }
 /* Slider home */
 .wrap-logo {
