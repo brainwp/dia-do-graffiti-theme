@@ -455,6 +455,16 @@ nav.internal-menu .navbar-nav {
 	opacity: 0.8;
 	outline: none;
 }
+@media screen and ( max-width: 768px ) {
+	#homenageado-home .galeria img {
+		width: 25%;
+	}
+}
+@media screen and ( max-width: 480px ) {
+	#homenageado-home .galeria img {
+		width: 50%;
+	}
+}
 #homenageado-home .links {
 	padding-bottom: 15px;
 	text-align: center;
