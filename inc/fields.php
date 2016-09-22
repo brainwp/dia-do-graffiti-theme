@@ -278,7 +278,13 @@ function brasa_kirki_fields( $fields ) {
 		'default'  => '[brasa_slider name="Header"]',
 		'priority' => 1,
 	);
-
+	$fields[] = array(
+		'type'     => 'image',
+		'setting'  => 'home_site_image_mu',
+		'label'    => __( 'Site image', 'odin' ),
+		'section'  => 'home_site_info',
+		'priority' => 1,
+	);
 	$fields[] = array(
 		'type'     => 'text',
 		'setting'  => 'home_site_name',
