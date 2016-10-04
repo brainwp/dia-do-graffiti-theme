@@ -174,7 +174,7 @@ function brasa_kirki_fields( $fields ) {
 	$fields[] = array(
 		'type'     => 'color',
 		'setting'  => 'main_color',
-		'label'    => __( 'Main site color', 'odin' ),
+		'label'    => __( 'Main Site Color', 'odin' ),
 		'section'  => 'visual',
 		'default'  => '#25AED1',
 		'priority' => 1,
@@ -195,6 +195,24 @@ function brasa_kirki_fields( $fields ) {
             	'element' => '.content-noticias h3',
             	'property' => 'color',
             ),
+    	),
+	);
+	$fields[] = array(
+		'type'     => 'color',
+		'setting'  => 'main_hover_color',
+		'label'    => __( 'Main Hover Color', 'odin' ),
+		'section'  => 'visual',
+		'default'  => '#00DDD8',
+		'priority' => 1,
+		'output' => array(
+			array(
+            	'element'  => '.bg-cor:hover',
+            	'property' => 'background-color',
+            ),
+			array(
+            	'element'  => '.css-cor:hover',
+            	'property' => 'color',
+            )
     	),
 	);
 	$fields[] = array(

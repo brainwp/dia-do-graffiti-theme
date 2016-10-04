@@ -97,7 +97,6 @@ body.logged-in #header {
     transition: all 200ms ease-in-out;
 }
 #header .featured-btn:hover {
-    background: #ea7a06;
     text-decoration: none;
 }
 #header .header-image {
