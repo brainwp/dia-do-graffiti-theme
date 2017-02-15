@@ -26,7 +26,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="bg-slider" style="<?php echo esc_attr( $style );?>">
+	<div class="bg-slider" style="<?php //echo esc_attr( $style );?>">
 
 	<header id="header" role="banner">
 		<div class="container-menu" id="header-size">

@@ -1,6 +1,16 @@
 # Dia do Graffiti #
 Tema desenvolvido pela [Brasa](http://www.brasa.art.br/) para o site [Dia do Graffiti](http://www.diadograffiti.org/), em parceria com a [Ação Educativa](http://www.acaoeducativa.org/) e a comissão de artistas organizadores do evento.
 
+## Configurações ##
+
+### Plugins Necessários ###
+
+* [Brasa Slider](https://wordpress.org/plugins/brasa-slider/)
+
+
+### Home ###
+
+
 ## Copyright e Licença ##
 
 Copyright 2015 - Brasa.

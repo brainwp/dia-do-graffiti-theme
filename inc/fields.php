@@ -132,10 +132,12 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
 /*
 * Kirk / Customize API
 */
 include_once get_template_directory() . '/inc/kirki/kirki.php';
+
 /**
  * Create the customizer panels and sections
  */
@@ -295,6 +297,7 @@ function brasa_kirki_fields( $fields ) {
 		'section'  => 'visual',
 		'default'  => '[brasa_slider name="Header"]',
 		'priority' => 1,
+		'sanitize_callback' => 'do_not_filter_anything',
 	);
 	$fields[] = array(
 		'type'     => 'image',

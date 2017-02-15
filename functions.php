@@ -406,3 +406,7 @@ function arrested_subdomain($echo = false) {
 		return (false);
 	}
 }
+
+function do_not_filter_anything( $value ) {
+ return $value;
+}
