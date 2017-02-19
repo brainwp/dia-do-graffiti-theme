@@ -70,6 +70,27 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		/*
+		 * Set image sizes default in activation theme.
+		 */
+		if ( isset( $_GET['activated'] ) && is_admin() ) {
+			
+			/* Thumbnail */
+			update_option( 'thumbnail_size_w',	400 );
+			update_option( 'thumbnail_size_h',	400 );
+			update_option( 'thumbnail_crop', 	1 );
+			
+			/* Medium */
+			update_option( 'medium_size_w',		720 );
+			update_option( 'medium_size_h',		720 );
+			update_option( 'medium_crop',		1 );
+			
+			/* Large */
+			update_option( 'large_size_w',		1280 );
+			update_option( 'large_size_h',		720 );
+			update_option( 'large_crop',		1 );
+		}
+
 		/**
 		 * Add feed link.
 		 */
