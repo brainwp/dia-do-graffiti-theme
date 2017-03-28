@@ -58,12 +58,7 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 
 				<?php
 					$homenageado = get_post( $hid );
-
-					echo '<h2>' . __( 'Honored', 'odin' );
-					if ( is_numeric( $subdomain = arrested_subdomain() ) ) {
-						echo '/' . $subdomain;
-					}
-					echo '</h2>';
+					echo '<h2>' . apply_filters( 'the_title', $homenageado->post_title ) . '</h2>';
 					echo apply_filters( 'the_content', $homenageado->post_content );
 				?>
 				
