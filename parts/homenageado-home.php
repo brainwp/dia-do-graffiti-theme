@@ -29,7 +29,7 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 					    $img_full = wp_get_attachment_image_src( $foto_id, 'full' );
 					    if ( !empty( $img ) ) {
 					    	echo '<a rel="gallery" class="fancybox" href="' . $img_full[0] . '">';
-						    echo '<img class="col-sm-4" src="' . $img[0] . '" width="'. $img[1] . '" height="' . $img[2] . '">';
+						    echo '<img class="col-sm-4" src="' . esc_url( $img[0] ) . '" width="'. $img[1] . '" height="' . $img[2] . '">';
 						    echo '</a>';
 					    }
 					}
@@ -43,8 +43,8 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 						echo '<div class="links">';
 						foreach ( explode( '<br />', $links ) as $link ) {
 							$link = trim( $link );
-							echo '<a class="external-link" href="' . $link . '" target="_blank">';
-							echo $link;
+							echo '<a class="external-link" href="' . esc_url( $link ) . '" target="_blank">';
+							echo esc_url( $link );
 							echo '</a>';
 						}
 						echo '</div><!-- links -->';	
@@ -68,54 +68,4 @@ if ( $hid = kirki_get_option( 'homenageado_id' ) ) : ?>
 
 	</section><!-- #homenageado-home -->
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<?php 
-
-		
-
-		//var_dump($links);
-
-
-		
-
-
-
-
-		$custom_fields = get_post_custom( $hid );
-		foreach ( $custom_fields as $field_key => $field_values ) {
-			if(!isset($field_values[0])) continue;
-			if(in_array($field_key,array("_edit_lock","_edit_last"))) continue;
-		//echo $field_key . '=>' . $field_values[0];
-		}
-		?>
-
-		<?php //var_dump( $page ); ?>
-
-		<!-- Continua... -->
-
-	
-
-
 <?php endif; ?>
